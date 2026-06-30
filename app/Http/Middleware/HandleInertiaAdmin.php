@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Setting;
+use App\Models\ContactSubmission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
@@ -50,6 +52,10 @@ class HandleInertiaAdmin extends Middleware
                 'message' => fn () => $request->session()->get('user_message'),
                 'additional_data' => fn () => $request->session()->get('additional_data'),
             ],
+            'site' => fn () => [
+                'logo_url' => Setting::logoUrl(),
+            ],
+            'unread_messages_count' => fn () => ContactSubmission::query()->whereNull('read_at')->count(),
         ]);
     }
 

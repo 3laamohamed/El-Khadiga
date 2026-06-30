@@ -1,145 +1,562 @@
 <template>
-    <Head title="الفئات"/>
-    <Layout :prv_page="[
-        {'name' : 'الفئات'}
-        ]">
-    <div class="card mb-5 mb-xl-10">
-        <div class="card-header border-0 cursor-pointer">
-            <div class="card-title m-0">
-                <h3 class="fw-bolder m-0">الفئات</h3>
-            </div>
-            <div class="card-toolbar">
-                <button type="button" id="btn-search" class="nav-link btn btn-sm  me-2" style="background-color: #115da6 ;color: #ffffff"  @click="toggle_search">بحث</button>
-                <Link class="nav-link btn btn-sm  me-2"  style="background-color: #115da6 ;color: #ffffff" href="/admin/category/create">إضافة</link>
-            </div>
-        </div>
-        <div class="card-body border-top p-9">
-            <div id="search-box" style="display: none">
-                <div class="row g-8 mb-8 align-items-end">
-                    <div class="col-lg-3">
-                        <label class="fs-6 form-label fw-bolder text-dark">الاسم</label>
-                        <input type="text" class="form-control form-control-solid" v-model="name">
-                    </div>
-                    <div class="col-lg-3">
-                        <button type="button" class="btn w-100 btn-icon  " style="background-color: #115da6 ;color: #ffffff"  @click="do_search">
-                            <i class="las la-search fs-2 me-2"></i> بحث
-                        </button>
-                    </div>
+    <Head title="Categories" />
+    <Layout :prv_page="[{ name: 'Categories' }]">
+        <div class="categories-page">
+            <header class="categories-hero">
+                <div>
+                    <span class="categories-hero__eyebrow">Catalog Structure</span>
+                    <h1 class="categories-hero__title">Categories</h1>
+                    <p class="categories-hero__desc">
+                        Organize products into Fruits, Vegetables, and other export groups.
+                    </p>
                 </div>
-                <div class="separator separator-dashed mt-9 mb-6"></div>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-hover table-rounded table-row-bordered border gy-3 gs-3">
-                    <thead>
-                    <tr class="fw-bolder fs-6 text-gray-800 border-bottom-2 border-gray-200 bg-light">
-                        <th class="p-5 text-center border">#</th>
-                        <th class="p-5 text-center border"> العنوان بالعربية </th>
-                        <th class="p-5 text-center border"> العنوان بالانجليزية </th>
-                        <th class="p-5 text-center border">ايقون</th>
-                        <th class="p-5 text-center border">###</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(item,index) in category.data" :key="item.id" :class="{'table-active': index % 2 !== 0 }">
-                        <td class="text-center border">{{ ++index}}</td>
-                        <td class="text-center border">{{item.title_ar}}</td>
-                        <td class="text-center border">{{item.title_en}}</td>
-                        <td class="text-center border"><img :src="item.icon_url ?? '/assets/media/logos/01.png'" style="max-width: 50px;border-radius: 5px;"></td>
-                        <td class="text-center border">
-                            <Link :href="`/admin/category/${item.id}/edit`"  >
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#115da6" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) "/>
-                                        <path style="color:#73e14e" d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#115da6" fill-rule="nonzero" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                            <Link   @click="delete_shop(item.id)" >
-                                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M6,8 L18,8 L17.106535,19.6150447 C17.04642,20.3965405 16.3947578,21 15.6109533,21 L8.38904671,21 C7.60524225,21 6.95358004,20.3965405 6.89346498,19.6150447 L6,8 Z M8,10 L8.45438229,14.0894406 L15.5517885,14.0339036 L16,10 L8,10 Z" fill="#115da6" fill-rule="nonzero"/>
-                                        <path d="M14,4.5 L14,3.5 C14,3.22385763 13.7761424,3 13.5,3 L10.5,3 C10.2238576,3 10,3.22385763 10,3.5 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#115da6" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <Pagination :links="category.links" />
-        </div>
-    </div>
-    </Layout>
+                <Link href="/admin/category/create" class="categories-btn categories-btn--primary">
+                    <span v-html="icons.plus"></span>
+                    Add Category
+                </Link>
+            </header>
 
+            <div class="categories-stats">
+                <div class="categories-stat">
+                    <span class="categories-stat__label">Total Categories</span>
+                    <strong>{{ category.total ?? category.data.length }}</strong>
+                </div>
+                <div class="categories-stat">
+                    <span class="categories-stat__label">With Icons</span>
+                    <strong>{{ withIconCount }}</strong>
+                </div>
+                <div class="categories-stat">
+                    <span class="categories-stat__label">Current Page</span>
+                    <strong>{{ category.data.length }}</strong>
+                </div>
+            </div>
+
+            <section class="categories-panel">
+                <div class="categories-toolbar">
+                    <div class="categories-search">
+                        <span class="categories-search__icon" v-html="icons.search"></span>
+                        <input
+                            v-model="name"
+                            type="text"
+                            class="categories-search__input"
+                            placeholder="Search by English or Arabic title..."
+                            @keyup.enter="applyFilters"
+                        />
+                    </div>
+                    <button type="button" class="categories-btn categories-btn--ghost" @click="applyFilters">
+                        Search
+                    </button>
+                    <button
+                        v-if="name"
+                        type="button"
+                        class="categories-btn categories-btn--ghost"
+                        @click="clearFilters"
+                    >
+                        Clear
+                    </button>
+                </div>
+
+                <div v-if="category.data.length" class="categories-table-wrap">
+                    <table class="categories-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Slug</th>
+                                <th>Icon</th>
+                                <th class="categories-table__actions-head">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in category.data" :key="item.id">
+                                <td>
+                                    <div class="categories-cell">
+                                        <div class="categories-thumb">
+                                            <img
+                                                v-if="item.icon_url"
+                                                :src="item.icon_url"
+                                                :alt="item.title_en"
+                                            />
+                                            <span v-else class="categories-thumb__placeholder" v-html="icons.grid"></span>
+                                        </div>
+                                        <div>
+                                            <strong>{{ item.title_en }}</strong>
+                                            <small>{{ item.title_ar }}</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <code class="categories-slug">{{ item.slug || '—' }}</code>
+                                </td>
+                                <td>
+                                    <span
+                                        class="categories-badge"
+                                        :class="item.icon_url ? 'categories-badge--yes' : 'categories-badge--no'"
+                                    >
+                                        {{ item.icon_url ? 'Uploaded' : 'Missing' }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="categories-actions">
+                                        <Link
+                                            :href="`/admin/category/${item.id}/edit`"
+                                            class="categories-action categories-action--edit"
+                                            title="Edit category"
+                                        >
+                                            <span v-html="icons.edit"></span>
+                                        </Link>
+                                        <button
+                                            type="button"
+                                            class="categories-action categories-action--delete"
+                                            title="Delete category"
+                                            @click="deleteCategory(item.id)"
+                                        >
+                                            <span v-html="icons.trash"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div v-else class="categories-empty">
+                    <div class="categories-empty__icon" v-html="icons.grid"></div>
+                    <h3>No categories found</h3>
+                    <p>{{ name ? 'Try a different search term.' : 'Create your first category to group products.' }}</p>
+                    <Link href="/admin/category/create" class="categories-btn categories-btn--primary">
+                        Add Category
+                    </Link>
+                </div>
+
+                <div v-if="category.data.length" class="categories-pagination">
+                    <Pagination :links="category.links" />
+                </div>
+            </section>
+        </div>
+    </Layout>
 </template>
 
 <script setup>
-import Pagination from "../../Shared/Pagination";
-import {Inertia} from "@inertiajs/inertia";
-import {ref, useAttrs} from "vue";
-import { useForm } from "@inertiajs/inertia-vue3";
-import Layout from "../../Shared/Layout";
+import { computed, ref } from 'vue';
+import { Inertia } from '@inertiajs/inertia';
+import { useForm } from '@inertiajs/inertia-vue3';
+import Pagination from '../../Shared/Pagination';
+import Layout from '../../Shared/Layout';
 
-const attrs = useAttrs();
+const icons = {
+    plus: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+    search: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M20 20L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+    edit: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 20H8L18.5 9.5C19.3284 8.67157 19.3284 7.32843 18.5 6.5V6.5C17.6716 5.67157 16.3284 5.67157 15.5 6.5L5 17V20H4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`,
+    trash: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M10 11V17M14 11V17M6 7L7 19H17L18 7M9 7V4H15V7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    grid: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/></svg>`,
+};
 
-
-
-let props = defineProps({
+const props = defineProps({
     category: Object,
     filters: Object,
 });
-let form = useForm({
 
-});
+const form = useForm({});
+const name = ref(props.filters?.name || '');
 
-let name = ref(props.filters.name);
+const withIconCount = computed(() =>
+    props.category.data.filter((item) => item.icon_url).length
+);
 
-let toggle_search = function () {
-    $('#search-box').toggle(1000);
-    let v_button = $('#btn-search');
-    v_button.text() ===  'بحث' ? v_button.text('اخفاء الفلاتر') : v_button.text('بحث');
-}
-
-let do_search = function () {
+const applyFilters = () => {
     Inertia.get('/admin/category', {
-        name: name.value,
+        name: name.value || undefined,
     }, {
         preserveState: true,
         replace: true,
         preserveScroll: true,
     });
-}
+};
 
+const clearFilters = () => {
+    name.value = '';
+    applyFilters();
+};
 
-let delete_shop = (id) => {
-    console.log(id)
+const deleteCategory = (id) => {
     Swal.fire({
-        title: 'هل أنت متأكد من الحذف؟',
-        text:  "لا يمكن التراجع عن هذه العملية!",
+        title: 'Delete this category?',
+        text: 'Products in this category may be affected.',
         icon: 'warning',
-        iconColor: '#115da6',
+        iconColor: '#A91E2C',
         showCancelButton: true,
-        confirmButtonColor: '#115da6',
-        cancelButtonColor: '#72808b',
-        cancelButtonText: 'الغاء',
-        confirmButtonText: 'موافق',
+        confirmButtonColor: '#A91E2C',
+        cancelButtonColor: '#6b7280',
+        cancelButtonText: 'Cancel',
+        confirmButtonText: 'Delete',
         backdrop: 'static',
         allowOutsideClick: false,
     }).then((result) => {
         if (result.isConfirmed) {
-            form.delete('/admin/category/'+ id , { preserveState: true,
-                replace: true,
-                preserveScroll: true,})
-
+            form.delete(`/admin/category/${id}`, {
+                preserveScroll: true,
+            });
         }
     });
-}
-
+};
 </script>
 
 <style scoped>
+.categories-page {
+    --c-primary: #A91E2C;
+    --c-primary-dark: #8E1824;
+    --c-secondary: #5A8F3C;
+    --c-surface: #ffffff;
+    --c-border: #e6ebe6;
+    --c-text: #1a1a1a;
+    --c-muted: #6b7280;
+    --c-radius: 16px;
+    --c-shadow: 0 8px 32px rgba(26, 26, 26, 0.06);
+    padding-bottom: 2rem;
+}
 
+.categories-hero,
+.categories-panel,
+.categories-stat {
+    border: 1px solid var(--c-border);
+    background: var(--c-surface);
+    box-shadow: var(--c-shadow);
+}
+
+.categories-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1.75rem 1.85rem;
+    border-radius: var(--c-radius);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(90, 143, 60, 0.12), transparent 42%),
+        radial-gradient(circle at 0% 100%, rgba(169, 30, 44, 0.1), transparent 40%),
+        var(--c-surface);
+}
+
+.categories-hero__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    color: var(--c-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.categories-hero__title {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--c-text);
+}
+
+.categories-hero__desc {
+    margin: 0.45rem 0 0;
+    max-width: 34rem;
+    color: var(--c-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.categories-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.72rem 1.15rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.categories-btn--primary {
+    background: linear-gradient(135deg, var(--c-primary), var(--c-primary-dark));
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(169, 30, 44, 0.22);
+}
+
+.categories-btn--primary:hover {
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.categories-btn--ghost {
+    background: #fff;
+    border: 1px solid var(--c-border);
+    color: var(--c-text);
+}
+
+.categories-btn--ghost:hover {
+    background: #f7f9f7;
+}
+
+.categories-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.categories-stat {
+    padding: 1rem 1.15rem;
+    border-radius: 14px;
+}
+
+.categories-stat__label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--c-muted);
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.categories-stat strong {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--c-text);
+}
+
+.categories-panel {
+    padding: 1.25rem;
+    border-radius: var(--c-radius);
+}
+
+.categories-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.categories-search {
+    position: relative;
+    flex: 1 1 280px;
+}
+
+.categories-search__icon {
+    position: absolute;
+    top: 50%;
+    left: 0.9rem;
+    transform: translateY(-50%);
+    color: var(--c-muted);
+}
+
+.categories-search__input {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.7rem 0.95rem 0.7rem 2.5rem;
+    border: 1px solid var(--c-border);
+    border-radius: 12px;
+    background: #fafbfa;
+    font-size: 0.9rem;
+}
+
+.categories-search__input:focus {
+    outline: none;
+    border-color: rgba(90, 143, 60, 0.45);
+    box-shadow: 0 0 0 3px rgba(90, 143, 60, 0.12);
+    background: #fff;
+}
+
+.categories-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--c-border);
+    border-radius: 14px;
+}
+
+.categories-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+}
+
+.categories-table thead {
+    background: #f7f9f7;
+}
+
+.categories-table th {
+    padding: 0.9rem 1rem;
+    color: var(--c-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.categories-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eef2ee;
+    vertical-align: middle;
+}
+
+.categories-table tbody tr:hover {
+    background: #fcfdfc;
+}
+
+.categories-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.categories-table__actions-head {
+    text-align: right;
+}
+
+.categories-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.categories-cell strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--c-text);
+}
+
+.categories-cell small {
+    display: block;
+    margin-top: 0.15rem;
+    color: var(--c-muted);
+    font-size: 0.8rem;
+}
+
+.categories-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f3f5f3;
+    border: 1px solid var(--c-border);
+    flex-shrink: 0;
+}
+
+.categories-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categories-thumb__placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: #9ca3af;
+}
+
+.categories-slug {
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 0.8rem;
+}
+
+.categories-badge {
+    display: inline-flex;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.categories-badge--yes {
+    background: rgba(90, 143, 60, 0.12);
+    color: var(--c-secondary);
+}
+
+.categories-badge--no {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.categories-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.45rem;
+}
+
+.categories-action {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--c-border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--c-muted);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.categories-action--edit:hover {
+    background: rgba(90, 143, 60, 0.08);
+    border-color: rgba(90, 143, 60, 0.35);
+    color: var(--c-secondary);
+}
+
+.categories-action--delete:hover {
+    background: rgba(169, 30, 44, 0.08);
+    border-color: rgba(169, 30, 44, 0.35);
+    color: var(--c-primary);
+}
+
+.categories-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+}
+
+.categories-empty__icon {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: #f3f5f3;
+    color: #9ca3af;
+}
+
+.categories-empty h3 {
+    margin: 0.25rem 0 0;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.categories-empty p {
+    margin: 0;
+    color: var(--c-muted);
+}
+
+.categories-pagination {
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .categories-hero {
+        flex-direction: column;
+    }
+
+    .categories-stats {
+        grid-template-columns: 1fr;
+    }
+}
 </style>

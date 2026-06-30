@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <g id="sprout">
+    <path d="M28 52 C28 38 34 28 42 22 C38 32 36 42 38 52 Z" fill="#5A8F3C"/>
+    <path d="M42 52 C42 36 50 24 58 18 C52 30 48 42 50 52 Z" fill="#4A7832"/>
+    <path d="M36 52 L48 52 L42 58 Z" fill="#4A7832"/>
+    <line x1="42" y1="52" x2="42" y2="62" stroke="#4A7832" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="68" y="38" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="18" fill="currentColor" letter-spacing="2">EL-KHADIGA</text>
+  <text x="68" y="56" font-family="Montserrat, Arial, sans-serif" font-weight="500" font-size="9" fill="currentColor" letter-spacing="3" opacity="0.85">FOR EXPORT</text>
+</svg>

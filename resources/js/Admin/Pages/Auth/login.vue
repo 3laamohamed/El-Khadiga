@@ -1,5 +1,5 @@
 <template>
-    <Head title="تسجيل الدخول" />
+    <Head title="Login" />
     <!--begin::Head-->
     <head><base href="../../../">
         <meta charset="utf-8" />
@@ -12,7 +12,7 @@
         <meta property="og:url" content="https://keenthemes.com/metronic" />
         <meta property="og:site_name" content="Keenthemes | Metronic" />
         <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-        <link rel="shortcut icon" href="/assets/media/logos/favicon.ico" />
+        <link rel="shortcut icon" href="/images/logo.png" />
         <!--begin::Fonts-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
         <!--end::Fonts-->
@@ -46,7 +46,7 @@
 <!--                            <h1 class="text-dark mb-3">تسجيل الدخول </h1>-->
                             <div class="logo">
                                 <div>
-                                    <img   src="/assets/media/logos/01.png" alt="logo">
+                                    <img :src="logoSrc" alt="El Khadiga">
                                 </div>
                             </div>
 
@@ -62,7 +62,7 @@
                         <!--begin::Input group-->
                         <div class="fv-row mb-10">
                             <!--begin::Label-->
-                            <label class="form-label fs-6 fw-bolder text-dark">البريد الالكتروني</label>
+                            <label class="form-label fs-6 fw-bolder text-dark">Email</label>
                             <!--end::Label-->
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" type="text" v-model="form.email"  autocomplete="off" />
@@ -75,7 +75,7 @@
                             <!--begin::Wrapper-->
                             <div class="d-flex flex-stack mb-2">
                                 <!--begin::Label-->
-                                <label class="form-label fw-bolder text-dark fs-6 mb-0">كلمة المرور</label>
+                                <label class="form-label fw-bolder text-dark fs-6 mb-0">Password</label>
                                 <!--end::Label-->
                                 <!--begin::Link-->
                                 <!--end::Link-->
@@ -104,7 +104,7 @@
                         <div class="text-center">
                             <!--begin::Submit button-->
                             <button type="submit"  class="btn btn-lg  w-100 mb-5" style="background-color: #115da6 ;color: #ffffff">
-                                <span class="indicator-label">تسجيل الدخول</span>
+                                <span class="indicator-label">Sign In</span>
                                 <span class="indicator-progress">Please wait...
 									<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
@@ -143,7 +143,8 @@ export default {
 <script setup>
 import {Inertia} from "@inertiajs/inertia";
 import {ref, useAttrs} from "vue";
-import {useForm} from "@inertiajs/inertia-vue3";
+import {useForm, usePage} from "@inertiajs/inertia-vue3";
+import { computed } from 'vue';
 
 
 const attrs = useAttrs();
@@ -151,6 +152,9 @@ const attrs = useAttrs();
 let props = defineProps({
 
 });
+
+const page = usePage();
+const logoSrc = computed(() => page.props.site?.logo_url || '/images/logo.png');
 
 let form = useForm({
     email: '',
@@ -191,13 +195,15 @@ $(document).ready(function() {
 }
 .logo div {
     width: 100%;
-    height: 250px;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
 }
 .logo div img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
 }
 
 </style>

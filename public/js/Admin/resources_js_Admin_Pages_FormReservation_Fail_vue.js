@@ -78,11 +78,11 @@ var __default__ = {
     }
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*@__PURE__*/Object.assign(__default__, {
   __name: 'Fail',
   setup: function setup(__props, _ref) {
-    var expose = _ref.expose;
-    expose();
+    var __expose = _ref.expose;
+    __expose();
     var attrs = (0,vue__WEBPACK_IMPORTED_MODULE_1__.useAttrs)();
     var __returned__ = {
       attrs: attrs,
@@ -117,66 +117,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
-  href: "../../../"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  charset: "utf-8"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  name: "description",
-  content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  name: "keywords",
-  content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  name: "viewport",
-  content: "width=device-width, initial-scale=1"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  property: "og:locale",
-  content: "en_US"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  property: "og:type",
-  content: "article"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  property: "og:title",
-  content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  property: "og:url",
-  content: "https://keenthemes.com/metronic"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-  property: "og:site_name",
-  content: "Keenthemes | Metronic"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-  rel: "canonical",
-  href: "https://preview.keenthemes.com/metronic8"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-  rel: "shortcut icon",
-  href: "/assets/media/logos/favicon.ico"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-  rel: "stylesheet",
-  href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-  href: "/assets/plugins/global/plugins.bundle.css",
-  rel: "stylesheet",
-  type: "text/css"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-  href: "/assets/css/style.bundle.css",
-  rel: "stylesheet",
-  type: "text/css"
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* HOISTED */);
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<body id=\"kt_body\" class=\"bg-light\" style=\"height:100%;\"><!--begin::Main--><!--begin::Root--><div class=\"d-flex flex-column flex-root\" style=\"height:100%;\"><!--begin::Authentication - Sign-in --><div style=\"height:100%;\" class=\"d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed\"><div class=\"w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto\" style=\"margin-top:auto !important;margin-bottom:auto !important;\"><div class=\"alert alert-danger\"><h1 class=\"text-center\"> حدث خطأ في عملية تأكيد الحجز </h1></div></div><!--end::Content--></div><!--end::Authentication - Sign-in--></div></body>", 1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Head, {
     title: "حجز الموعد"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Head"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Body"), _hoisted_2], 64 /* STABLE_FRAGMENT */);
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
+    href: "../../../"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    charset: "utf-8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "description",
+    content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "keywords",
+    content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:locale",
+    content: "en_US"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:type",
+    content: "article"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:title",
+    content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:url",
+    content: "https://keenthemes.com/metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:site_name",
+    content: "Keenthemes | Metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "canonical",
+    href: "https://preview.keenthemes.com/metronic8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "shortcut icon",
+    href: "/assets/media/logos/favicon.ico"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/plugins/global/plugins.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/css/style.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Head"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Body"), _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<body id=\"kt_body\" class=\"bg-light\" style=\"height:100%;\"><!--begin::Main--><!--begin::Root--><div class=\"d-flex flex-column flex-root\" style=\"height:100%;\"><!--begin::Authentication - Sign-in --><div style=\"height:100%;\" class=\"d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed\"><div class=\"w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto\" style=\"margin-top:auto !important;margin-bottom:auto !important;\"><div class=\"alert alert-danger\"><h1 class=\"text-center\"> حدث خطأ في عملية تأكيد الحجز </h1></div></div><!--end::Content--></div><!--end::Authentication - Sign-in--></div></body>", 1))], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css":
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -196,10 +194,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n#app {\n    height: 100% !important;
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -208,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css");
 
             
 
@@ -217,11 +215,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -238,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Fail_vue_vue_type_template_id_5c349ce4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fail.vue?vue&type=template&id=5c349ce4 */ "./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=template&id=5c349ce4");
 /* harmony import */ var _Fail_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Fail.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css */ "./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css");
-/* harmony import */ var C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -246,7 +244,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Fail_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Fail_vue_vue_type_template_id_5c349ce4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/FormReservation/Fail.vue"]])
+const __exports__ = /*#__PURE__*/(0,F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Fail_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Fail_vue_vue_type_template_id_5c349ce4__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Admin/Pages/FormReservation/Fail.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -292,7 +290,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Fail_vue_vue_type_style_index_0_id_5c349ce4_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/Fail.vue?vue&type=style&index=0&id=5c349ce4&lang=css");
 
 
 /***/ })

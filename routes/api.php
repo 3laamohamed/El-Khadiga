@@ -1,26 +1,18 @@
 <?php
 
-use App\Http\Controllers\Api\WebSiteController;
+use App\Http\Controllers\Api\PublicSiteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('/contactUs', [WebSiteController::class, 'contactUs']);
-Route::get('/sliders', [WebSiteController::class, 'sliders']);
-Route::get('/about', [WebSiteController::class, 'about']);
-Route::get('/services', [WebSiteController::class, 'services']);
-Route::get('/additionals', [WebSiteController::class, 'additionals']);
-Route::get('/clients', [WebSiteController::class, 'clients']);
+
+Route::get('/seo', [PublicSiteController::class, 'seo']);
+Route::get('/home', [PublicSiteController::class, 'home']);
+Route::get('/about', [PublicSiteController::class, 'about']);
+Route::get('/categories', [PublicSiteController::class, 'categories']);
+Route::get('/products', [PublicSiteController::class, 'products']);
+Route::get('/products/{slug}', [PublicSiteController::class, 'product']);
+Route::get('/contact-info', [PublicSiteController::class, 'contactInfo']);
+Route::post('/contact', [PublicSiteController::class, 'contact']);

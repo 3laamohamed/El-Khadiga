@@ -10,7 +10,7 @@
             </div>
             <div class="card-toolbar">
                 <button type="button" id="btn-search" class="nav-link btn btn-sm  me-2" style="background-color: #115da6 ;color: #ffffff"  @click="toggle_search">بحث</button>
-                <Link class="nav-link btn btn-sm  me-2"  style="background-color: #115da6 ;color: #ffffff" href="/admin/additionals/create">إضافة</link>
+                <Link class="nav-link btn btn-sm  me-2"  style="background-color: #115da6 ;color: #ffffff" href="/admin/additionals/create">إضافة</Link>
             </div>
         </div>
         <div class="card-body border-top p-9">

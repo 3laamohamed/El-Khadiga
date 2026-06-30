@@ -38,7 +38,7 @@ class LoginController extends Controller
         else
         {
             throw \Illuminate\Validation\ValidationException::withMessages([
-                'login' => ['خطاء  في البريد الالكتروني او كلمة المرور'],
+                'login' => ['Invalid email or password.'],
             ]);
         }
 

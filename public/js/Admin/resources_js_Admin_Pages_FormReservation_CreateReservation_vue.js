@@ -14,7 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
 
 
 
@@ -79,7 +78,7 @@ var __default__ = {
     }
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*@__PURE__*/Object.assign(__default__, {
   __name: 'CreateReservation',
   props: {
     shop: Object,
@@ -93,10 +92,10 @@ var __default__ = {
     category: String
   },
   setup: function setup(__props, _ref) {
-    var expose = _ref.expose;
-    expose();
-    var props = __props;
+    var __expose = _ref.expose;
+    __expose();
     var attrs = (0,vue__WEBPACK_IMPORTED_MODULE_1__.useAttrs)();
+    var props = __props;
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.useForm)({
       shop_id: props.shop.id,
       name: props.name,
@@ -141,7 +140,7 @@ var __default__ = {
         return props;
       },
       set props(v) {
-        v, _readOnlyError("props");
+        props = v;
       },
       get form() {
         return form;
@@ -189,141 +188,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 
-var _withScopeId = function _withScopeId(n) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-15eeb020"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
-};
-var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
-    href: "../../../"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    charset: "utf-8"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "description",
-    content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "keywords",
-    content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "viewport",
-    content: "width=device-width, initial-scale=1"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:locale",
-    content: "en_US"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:type",
-    content: "article"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:title",
-    content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:url",
-    content: "https://keenthemes.com/metronic"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:site_name",
-    content: "Keenthemes | Metronic"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "canonical",
-    href: "https://preview.keenthemes.com/metronic8"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "icon",
-    href: "/assets/media/logos/cover.png"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <link rel=\"icon\" type=\"image/x-icon\" href=\"/images/favicon.ico\"> "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "/assets/plugins/global/plugins.bundle.css",
-    rel: "stylesheet",
-    type: "text/css"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "/assets/css/style.bundle.css",
-    rel: "stylesheet",
-    type: "text/css"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* HOISTED */);
-});
-var _hoisted_2 = {
+var _hoisted_1 = {
   id: "kt_body",
   "class": "bg-light"
 };
-var _hoisted_3 = {
+var _hoisted_2 = {
   "class": "d-flex flex-column flex-root"
 };
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
 };
-var _hoisted_5 = {
+var _hoisted_4 = {
   "class": "w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto"
 };
+var _hoisted_5 = {
+  "class": "text-center mb-2"
+};
 var _hoisted_6 = {
-  "class": "text-center mb-2"
-};
-var _hoisted_7 = {
-  "class": "logo2"
-};
-var _hoisted_8 = ["src"];
-var _hoisted_9 = {
-  "class": "text-center mb-2"
-};
-var _hoisted_10 = {
   "class": "logo"
 };
-var _hoisted_11 = ["src"];
+var _hoisted_7 = ["src"];
+var _hoisted_8 = {
+  "class": "fv-row mb-2"
+};
+var _hoisted_9 = ["textContent"];
+var _hoisted_10 = {
+  "class": "fv-row mb-2"
+};
+var _hoisted_11 = ["textContent"];
 var _hoisted_12 = {
   "class": "fv-row mb-2"
 };
 var _hoisted_13 = ["textContent"];
 var _hoisted_14 = {
-  "class": "fv-row mb-2"
-};
-var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">رقم صاحب الحجز </label>")], -1 /* HOISTED */);
-});
-var _hoisted_16 = ["textContent"];
-var _hoisted_17 = {
-  "class": "fv-row mb-2"
-};
-var _hoisted_18 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">عددالاشخاص</label>")], -1 /* HOISTED */);
-});
-var _hoisted_19 = ["textContent"];
-var _hoisted_20 = {
   "class": "row"
 };
+var _hoisted_15 = {
+  "class": "col-lg-6"
+};
+var _hoisted_16 = {
+  "class": "fv-row mb-2"
+};
+var _hoisted_17 = ["textContent"];
+var _hoisted_18 = {
+  "class": "col-lg-6"
+};
+var _hoisted_19 = {
+  "class": "fv-row mb-2"
+};
+var _hoisted_20 = ["value"];
 var _hoisted_21 = {
-  "class": "col-lg-6"
-};
-var _hoisted_22 = {
-  "class": "fv-row mb-2"
-};
-var _hoisted_23 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">تاريخ الحجز </label>")], -1 /* HOISTED */);
-});
-var _hoisted_24 = ["textContent"];
-var _hoisted_25 = {
-  "class": "col-lg-6"
-};
-var _hoisted_26 = {
-  "class": "fv-row mb-2"
-};
-var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_28 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-    value: "",
-    disabled: ""
-  }, "اختر الوقت..", -1 /* HOISTED */);
-});
-var _hoisted_29 = ["value"];
-var _hoisted_30 = {
   key: 1,
   "class": "form-control form-control-lg form-control-solid",
   disabled: "",
@@ -331,125 +252,110 @@ var _hoisted_30 = {
   placeholder: "الوقت",
   autocomplete: "off"
 };
-var _hoisted_31 = ["textContent"];
-var _hoisted_32 = {
+var _hoisted_22 = ["textContent"];
+var _hoisted_23 = {
   "class": "row"
 };
-var _hoisted_33 = {
+var _hoisted_24 = {
   key: 0,
   "class": "col-lg-6"
 };
-var _hoisted_34 = {
+var _hoisted_25 = {
   "class": "fv-row mb-2"
 };
-var _hoisted_35 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_36 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-    value: "",
-    disabled: ""
-  }, "اختر المناسبة..", -1 /* HOISTED */);
-});
-var _hoisted_37 = ["value"];
-var _hoisted_38 = ["textContent"];
-var _hoisted_39 = {
+var _hoisted_26 = ["value"];
+var _hoisted_27 = ["textContent"];
+var _hoisted_28 = {
   "class": "col-lg-6"
 };
-var _hoisted_40 = {
+var _hoisted_29 = {
   "class": "fv-row mb-2"
 };
-var _hoisted_41 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_42 = {
+var _hoisted_30 = {
   value: "",
   disabled: ""
 };
-var _hoisted_43 = ["value"];
-var _hoisted_44 = ["textContent"];
-var _hoisted_45 = {
+var _hoisted_31 = ["value"];
+var _hoisted_32 = ["textContent"];
+var _hoisted_33 = {
   "class": "fv-row mb-2"
 };
-var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "d-flex flex-stack mb-2"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_47 = ["textContent"];
-var _hoisted_48 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", {
-    style: {
-      "color": "red"
-    }
-  }, "تنويه:")], -1 /* HOISTED */);
-});
-var _hoisted_49 = {
+var _hoisted_34 = ["textContent"];
+var _hoisted_35 = {
   style: {
     "color": "#115da6"
   }
 };
-var _hoisted_50 = {
+var _hoisted_36 = {
   key: 0
 };
-var _hoisted_51 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " لا يوجد دفع عند الحجز ", -1 /* HOISTED */);
-});
-var _hoisted_52 = [_hoisted_51];
-var _hoisted_53 = {
+var _hoisted_37 = {
   key: 1
 };
-var _hoisted_54 = {
+var _hoisted_38 = {
   key: 2
 };
-var _hoisted_55 = {
+var _hoisted_39 = {
   "class": "text-center"
 };
-var _hoisted_56 = ["disabled"];
-var _hoisted_57 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "indicator-label"
-  }, "تأكيد الحجز", -1 /* HOISTED */);
-});
-var _hoisted_58 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "indicator-progress"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "spinner-border spinner-border-sm align-middle ms-2"
-  })], -1 /* HOISTED */);
-});
-var _hoisted_59 = [_hoisted_57, _hoisted_58];
-var _hoisted_60 = ["disabled"];
-var _hoisted_61 = {
+var _hoisted_40 = ["disabled"];
+var _hoisted_41 = ["disabled"];
+var _hoisted_42 = {
   "class": "indicator-label"
 };
-var _hoisted_62 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "indicator-progress"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "spinner-border spinner-border-sm align-middle ms-2"
-  })], -1 /* HOISTED */);
-});
-var _hoisted_63 = ["disabled"];
-var _hoisted_64 = {
+var _hoisted_43 = ["disabled"];
+var _hoisted_44 = {
   "class": "indicator-label"
 };
-var _hoisted_65 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "indicator-progress"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "spinner-border spinner-border-sm align-middle ms-2"
-  })], -1 /* HOISTED */);
-});
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$props$shop$logo_url;
   var _component_VueDatePicker = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("VueDatePicker");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Head title=\"حجز الموعد\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Head"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Body"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Main"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Root"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Authentication - Sign-in "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Content"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div  class=\"d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20\" style=\"max-width: 100%; overflow-x: auto;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;begin::Logo&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"d-flex flex-stack flex-wrap flex-md-nowrap card-rounded shadow p-8 p-lg-8 mb-n5 mb-lg-n13\" style=\"width: 800px; height: 150px; background-image: url('/assets/media/logos/cover.png')\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;end::Wrapper&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Head title=\"حجز الموعد\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _cache[31] || (_cache[31] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
+    href: "../../../"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    charset: "utf-8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "description",
+    content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "keywords",
+    content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:locale",
+    content: "en_US"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:type",
+    content: "article"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:title",
+    content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:url",
+    content: "https://keenthemes.com/metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:site_name",
+    content: "Keenthemes | Metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "canonical",
+    href: "https://preview.keenthemes.com/metronic8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "icon",
+    href: "/assets/media/logos/cover.png"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <link rel=\"icon\" type=\"image/x-icon\" href=\"/images/favicon.ico\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/plugins/global/plugins.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/css/style.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Head"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Body"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Main"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Root"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Authentication - Sign-in "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Content"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div  class=\"d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20\" style=\"max-width: 100%; overflow-x: auto;\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;begin::Logo&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"d-flex flex-stack flex-wrap flex-md-nowrap card-rounded shadow p-8 p-lg-8 mb-n5 mb-lg-n13\" style=\"width: 800px; height: 150px; background-image: url('/assets/media/logos/cover.png')\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                &lt;!&ndash;end::Wrapper&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[9] || (_cache[9] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.submit && $setup.submit.apply($setup, arguments);
     }, ["prevent"])),
@@ -460,13 +366,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $setup.form.casher_id = $event;
     })
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.casher_id]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.casher_id]]), _cache[29] || (_cache[29] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "text-center mb-2"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "logo2"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: '/assets/media/logos/01.png',
     alt: "logo"
-  }, null, 8 /* PROPS */, _hoisted_8)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  })])])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: (_$props$shop$logo_url = $props.shop.logo_url) !== null && _$props$shop$logo_url !== void 0 ? _$props$shop$logo_url : '/assets/media/logos/01.png',
     alt: "logo"
-  }, null, 8 /* PROPS */, _hoisted_11)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <label class=\"form-label fs-6 fw-bolder text-dark\">اسم صاحب الحجز </label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_7)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <label class=\"form-label fs-6 fw-bolder text-dark\">اسم صاحب الحجز </label>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "form-control form-control-lg form-control-solid",
     placeholder: "الاسم",
     type: "text",
@@ -478,7 +388,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.name),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_13)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_9)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_cache[10] || (_cache[10] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">رقم صاحب الحجز </label>")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "form-control form-control-lg form-control-solid",
     placeholder: "رقم الجوال",
     type: "tel",
@@ -493,7 +405,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.mobile),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_16)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_cache[11] || (_cache[11] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">عددالاشخاص</label>")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "class": "form-control form-control-lg form-control-solid",
     placeholder: "عدد الاشخاص",
     type: "number",
@@ -505,7 +419,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.count_people),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_19)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <input class=\"form-control form-control-lg form-control-solid  \" id=\"datepicker\" type=\"text\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       placeholder=\"اختر التاريخ\" style=\"width: 100%;\"   v-model=\"form.reservation_date\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueDatePicker, {
+  }, null, 8 /* PROPS */, _hoisted_13)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_cache[12] || (_cache[12] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <label class=\"form-label fw-bolder text-dark fs-6 mb-0\">تاريخ الحجز </label>")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <input class=\"form-control form-control-lg form-control-solid  \" id=\"datepicker\" type=\"text\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       placeholder=\"اختر التاريخ\" style=\"width: 100%;\"   v-model=\"form.reservation_date\""), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                       />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueDatePicker, {
     "input-class-name": "form-control form-control-lg form-control-solid vue-date-picker-custom",
     "enable-time-picker": false,
     modelValue: $setup.form.reservation_date,
@@ -520,7 +436,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_date),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_24)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, $props.appointmentsTimes ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("select", {
+  }, null, 8 /* PROPS */, _hoisted_17)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [_cache[14] || (_cache[14] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, null, -1 /* CACHED */)), $props.appointmentsTimes ? (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)(((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("select", {
     key: 0,
     "class": "form-control form-control-lg form-control-solid form-control m-bootstrap-select m-bootstrap-select--solid m_selectpicker",
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
@@ -530,44 +448,56 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "data-live-search": "true",
     "data-size": "5",
     "data-width": "100%"
-  }, [_hoisted_28, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.appointmentsTimes, function (time) {
+  }, [_cache[13] || (_cache[13] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    value: "",
+    disabled: ""
+  }, "اختر الوقت..", -1 /* CACHED */)), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.appointmentsTimes, function (time) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       value: time,
       key: time
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(time), 9 /* TEXT, PROPS */, _hoisted_29);
-  }), 128 /* KEYED_FRAGMENT */))], 544 /* HYDRATE_EVENTS, NEED_PATCH */)), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.reservation_time]]) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), !$props.appointmentsTimes ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("input", _hoisted_30)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.form.errors.reservation_time ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(time), 9 /* TEXT, PROPS */, _hoisted_20);
+  }), 128 /* KEYED_FRAGMENT */))], 544 /* NEED_HYDRATION, NEED_PATCH */)), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.reservation_time]]) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), !$props.appointmentsTimes ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("input", _hoisted_21)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.form.errors.reservation_time ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 2,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_time),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_31)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [$props.typeOccasions.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  }, null, 8 /* PROPS */, _hoisted_22)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [$props.typeOccasions.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_cache[16] || (_cache[16] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control form-control-lg form-control-solid",
     "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
       return $setup.form.type_occasion_id = $event;
     })
-  }, [_hoisted_36, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.typeOccasions, function (type_occasion) {
+  }, [_cache[15] || (_cache[15] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    value: "",
+    disabled: ""
+  }, "اختر المناسبة..", -1 /* CACHED */)), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.typeOccasions, function (type_occasion) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: type_occasion.id,
       value: type_occasion.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type_occasion.title), 9 /* TEXT, PROPS */, _hoisted_37);
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type_occasion.title), 9 /* TEXT, PROPS */, _hoisted_26);
   }), 128 /* KEYED_FRAGMENT */))], 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.type_occasion_id]]), $setup.form.errors.reservation_time ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_time),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_38)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [_hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  }, null, 8 /* PROPS */, _hoisted_27)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [_cache[17] || (_cache[17] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control form-control-lg form-control-solid",
     "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
       return $setup.form.service_id = $event;
     })
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", _hoisted_42, "اختر " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.category) + " ..", 1 /* TEXT */), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.services, function (service) {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", _hoisted_30, "اختر " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.category) + " ..", 1 /* TEXT */), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.services, function (service) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: service.id,
       value: service.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.title) + " | " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.table_type == 2 ? '' : service.table_type == 1 ? 'داخلية' : 'خارجية'), 9 /* TEXT, PROPS */, _hoisted_43);
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.title) + " | " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.table_type == 2 ? '' : service.table_type == 1 ? 'داخلية' : 'خارجية'), 9 /* TEXT, PROPS */, _hoisted_31);
   }), 128 /* KEYED_FRAGMENT */))], 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.service_id]]), $setup.form.errors.reservation_time ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_time),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_44)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [_hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+  }, null, 8 /* PROPS */, _hoisted_32)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_cache[18] || (_cache[18] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "d-flex flex-stack mb-2"
+  }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
     "class": "form-control form-control-lg form-control-solid",
     placeholder: "الملاحظات",
     "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
@@ -577,7 +507,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.notes),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_47)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" في حال عدم الحضور خلال "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", _hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.reservation_period) + " دقائق", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" يعتبر الحجز ملغي ")])]), $props.shopSetting.payment_method == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_50, _hoisted_52)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " يتم احتساب الدفع بقيمة " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value) + " ريال لكل شخص ", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " قيمة الحجز ثابتة وتساوي " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value) + " ريال ", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Input group"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Actions"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Submit button"), $props.shopSetting.payment_method == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+  }, null, 8 /* PROPS */, _hoisted_34)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _cache[30] || (_cache[30] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", {
+    style: {
+      "color": "red"
+    }
+  }, "تنويه:")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, [_cache[19] || (_cache[19] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" في حال عدم الحضور خلال ", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.reservation_period) + " دقائق", 1 /* TEXT */), _cache[20] || (_cache[20] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" يعتبر الحجز ملغي ", -1 /* CACHED */))])]), $props.shopSetting.payment_method == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_36, _toConsumableArray(_cache[21] || (_cache[21] = [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " لا يوجد دفع عند الحجز ", -1 /* CACHED */)])))) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " يتم احتساب الدفع بقيمة " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value) + " ريال لكل شخص ", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, " قيمة الحجز ثابتة وتساوي " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value) + " ريال ", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Input group"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Actions"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Submit button"), $props.shopSetting.payment_method == 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
     key: 0,
     type: "submit",
     "class": "btn btn-lg w-100 mb-5",
@@ -586,7 +520,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "color": "#ffffff"
     },
     disabled: $setup.form.processing
-  }, _hoisted_59, 8 /* PROPS */, _hoisted_56)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+  }, _toConsumableArray(_cache[22] || (_cache[22] = [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "indicator-label"
+  }, "تأكيد الحجز", -1 /* CACHED */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "indicator-progress"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "spinner-border spinner-border-sm align-middle ms-2"
+  })], -1 /* CACHED */)])), 8 /* PROPS */, _hoisted_40)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
     key: 1,
     type: "submit",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(['btn', 'btn-lg', 'w-100', 'mb-5', $setup.form.count_people == 0 ? 'disabled' : '']),
@@ -595,7 +535,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "background-color": "#115da6",
       "color": "#ffffff"
     }
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ادفع "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value * $setup.form.count_people), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ريال ")]), _hoisted_62], 10 /* CLASS, PROPS */, _hoisted_60)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_42, [_cache[23] || (_cache[23] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ادفع ", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value * $setup.form.count_people), 1 /* TEXT */), _cache[24] || (_cache[24] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ريال ", -1 /* CACHED */))]), _cache[25] || (_cache[25] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "indicator-progress"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "spinner-border spinner-border-sm align-middle ms-2"
+  })], -1 /* CACHED */))], 10 /* CLASS, PROPS */, _hoisted_41)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
     key: 2,
     type: "submit",
     "class": "btn btn-lg w-100 mb-5",
@@ -604,15 +548,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "color": "#ffffff"
     },
     disabled: $setup.form.processing
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ادفع "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ريال ")]), _hoisted_65], 8 /* PROPS */, _hoisted_63)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Link"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Submit button")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Actions")], 32 /* HYDRATE_EVENTS */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Form")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Content")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Authentication - Sign-in")])])], 64 /* STABLE_FRAGMENT */);
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_44, [_cache[26] || (_cache[26] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("ادفع ", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.shopSetting.payment_value), 1 /* TEXT */), _cache[27] || (_cache[27] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ريال ", -1 /* CACHED */))]), _cache[28] || (_cache[28] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "indicator-progress"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Please wait... "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "spinner-border spinner-border-sm align-middle ms-2"
+  })], -1 /* CACHED */))], 8 /* PROPS */, _hoisted_43)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Title"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Link"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Submit button")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Actions")], 32 /* NEED_HYDRATION */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Form")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Content")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Authentication - Sign-in")])])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -632,10 +580,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\ninput[type=\"number\"][data-v-15eeb0
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -644,7 +592,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css");
 
             
 
@@ -653,11 +601,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -674,7 +622,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreateReservation_vue_vue_type_template_id_15eeb020_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateReservation.vue?vue&type=template&id=15eeb020&scoped=true */ "./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=template&id=15eeb020&scoped=true");
 /* harmony import */ var _CreateReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateReservation.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css */ "./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css");
-/* harmony import */ var C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -682,7 +630,7 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_CreateReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CreateReservation_vue_vue_type_template_id_15eeb020_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-15eeb020"],['__file',"resources/js/Admin/Pages/FormReservation/CreateReservation.vue"]])
+const __exports__ = /*#__PURE__*/(0,F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_CreateReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_CreateReservation_vue_vue_type_template_id_15eeb020_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-15eeb020"],['__file',"resources/js/Admin/Pages/FormReservation/CreateReservation.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -728,7 +676,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_CreateReservation_vue_vue_type_style_index_0_id_15eeb020_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/CreateReservation.vue?vue&type=style&index=0&id=15eeb020&scoped=true&lang=css");
 
 
 /***/ })

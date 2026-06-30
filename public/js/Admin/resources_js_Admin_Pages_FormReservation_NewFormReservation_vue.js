@@ -21,7 +21,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 /* harmony import */ var swiper_css_scrollbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! swiper/css/scrollbar */ "./node_modules/swiper/modules/scrollbar.css");
 /* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.css");
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
 
 
 
@@ -102,7 +101,7 @@ var __default__ = {
     };
   }
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/Object.assign(__default__, {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*@__PURE__*/Object.assign(__default__, {
   __name: 'NewFormReservation',
   props: {
     shop: Object,
@@ -116,10 +115,10 @@ var __default__ = {
     category: String
   },
   setup: function setup(__props, _ref) {
-    var expose = _ref.expose;
-    expose();
-    var props = __props;
+    var __expose = _ref.expose;
+    __expose();
     var attrs = (0,vue__WEBPACK_IMPORTED_MODULE_1__.useAttrs)();
+    var props = __props;
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.useForm)({
       shop_id: props.shop.id,
       name: props.name,
@@ -201,7 +200,7 @@ var __default__ = {
         return props;
       },
       set props(v) {
-        v, _readOnlyError("props");
+        props = v;
       },
       get form() {
         return form;
@@ -296,343 +295,207 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _withScopeId = function _withScopeId(n) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-0a14c218"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
-};
-var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
-    href: "../../../"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    charset: "utf-8"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "description",
-    content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "keywords",
-    content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    name: "viewport",
-    content: "width=device-width, initial-scale=1"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:locale",
-    content: "en_US"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:type",
-    content: "article"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:title",
-    content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:url",
-    content: "https://keenthemes.com/metronic"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
-    property: "og:site_name",
-    content: "Keenthemes | Metronic"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "canonical",
-    href: "https://preview.keenthemes.com/metronic8"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "shortcut icon",
-    href: "/assets/media/logos/favicon.ico"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "/assets/plugins/global/plugins.bundle.css",
-    rel: "stylesheet",
-    type: "text/css"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "/assets/css/style.bundle.css",
-    rel: "stylesheet",
-    type: "text/css"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "/assets/css/newFormReservations.css",
-    rel: "stylesheet",
-    type: "text/css"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* HOISTED */);
-});
-var _hoisted_2 = {
+var _hoisted_1 = {
   id: "kt_body"
 };
-var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "logo-left"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/new_logo.png",
-    alt: "Right Logo"
-  })])], -1 /* HOISTED */);
-});
-var _hoisted_4 = {
+var _hoisted_2 = {
   "class": "form-container"
 };
-var _hoisted_5 = {
+var _hoisted_3 = {
   "class": "form"
 };
-var _hoisted_6 = {
+var _hoisted_4 = {
   "class": "header-section"
 };
-var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "flex-col",
-    style: {
-      "margin-bottom": "0"
-    }
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "title"
-  }, "تفاصيل الحجز"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "description"
-  }, "قم بملئ التفاصيل لتأكيد الحجز")], -1 /* HOISTED */);
-});
-var _hoisted_8 = {
+var _hoisted_5 = {
   "class": "logo-right"
 };
-var _hoisted_9 = ["src"];
-var _hoisted_10 = {
+var _hoisted_6 = ["src"];
+var _hoisted_7 = {
   "class": "flex-col-2",
   id: "rooms-form"
 };
-var _hoisted_11 = ["textContent"];
-var _hoisted_12 = {
+var _hoisted_8 = ["textContent"];
+var _hoisted_9 = {
   "class": "form-group"
 };
-var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "966+", -1 /* HOISTED */);
-});
-var _hoisted_14 = ["textContent"];
-var _hoisted_15 = ["textContent"];
-var _hoisted_16 = {
+var _hoisted_10 = ["textContent"];
+var _hoisted_11 = ["textContent"];
+var _hoisted_12 = {
   "class": "flex"
 };
-var _hoisted_17 = ["textContent"];
-var _hoisted_18 = {
+var _hoisted_13 = ["textContent"];
+var _hoisted_14 = {
   "class": "info-con"
 };
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"item\" data-v-0a14c218><img style=\"border-radius:50%;width:12px;\" src=\"/assets/success/impoortant.svg\" alt=\"Left Logo\" data-v-0a14c218><p class=\"impoortant\" data-v-0a14c218>تنوية هام</p></div><div class=\"item\" data-v-0a14c218><img style=\"border-radius:50%;width:12px;\" src=\"/assets/success/error.svg\" alt=\"Left Logo\" data-v-0a14c218><p class=\"error\" data-v-0a14c218> في حالة عدم الحضور خلال 10 دقائق يعتبر الحجز ملغي </p></div>", 2);
-var _hoisted_21 = {
+var _hoisted_15 = {
   "class": "item"
 };
-var _hoisted_22 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    style: {
-      "border-radius": "50%",
-      "width": "12px"
-    },
-    src: "/assets/success/error.svg",
-    alt: "Left Logo"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_23 = {
+var _hoisted_16 = {
   key: 0,
   "class": "error"
 };
-var _hoisted_24 = {
+var _hoisted_17 = {
   key: 1,
   "class": "error"
 };
-var _hoisted_25 = ["src"];
-var _hoisted_26 = {
+var _hoisted_18 = ["src"];
+var _hoisted_19 = {
   id: "rooms-section"
 };
-var _hoisted_27 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "flex-col"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-    "class": "title"
-  }, "اختار الغرفة المناسبة"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-    "class": "description"
-  }, " من بين المزيد من الخيارات يمكنك اختيار الغرفة المناسبة ")])], -1 /* HOISTED */);
-});
-var _hoisted_28 = {
+var _hoisted_20 = {
   "class": "counter"
 };
-var _hoisted_29 = ["onClick"];
-var _hoisted_30 = {
+var _hoisted_21 = ["onClick"];
+var _hoisted_22 = {
   key: 1,
   "class": "counter-value"
 };
-var _hoisted_31 = ["onClick"];
-var _hoisted_32 = ["src"];
-var _hoisted_33 = {
+var _hoisted_23 = ["onClick"];
+var _hoisted_24 = ["src"];
+var _hoisted_25 = {
   "class": "info-container"
 };
-var _hoisted_34 = {
+var _hoisted_26 = {
   "class": "info-section"
 };
-var _hoisted_35 = {
+var _hoisted_27 = {
   "class": "info-title"
 };
-var _hoisted_36 = {
+var _hoisted_28 = {
   "class": "info-price"
 };
-var _hoisted_37 = {
+var _hoisted_29 = {
   "class": "detail-section"
 };
-var _hoisted_38 = {
+var _hoisted_30 = {
   "class": "item-container"
 };
-var _hoisted_39 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/profile.svg"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_40 = {
+var _hoisted_31 = {
   "class": "item-container"
 };
-var _hoisted_41 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/dimentions.svg"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_42 = {
+var _hoisted_32 = {
   "class": "item-container"
 };
-var _hoisted_43 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/cigerites.svg"
-  }, null, -1 /* HOISTED */);
-});
-var _hoisted_44 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "item-container"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/time.svg"
-  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "وقت الدخول : 05:22 م")], -1 /* HOISTED */);
-});
-var _hoisted_45 = {
+var _hoisted_33 = {
   "class": "form-container",
   id: "note-section"
 };
-var _hoisted_46 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "flex-col"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-    "class": "title"
-  }, "معلومات اضافية")])], -1 /* HOISTED */);
-});
-var _hoisted_47 = {
+var _hoisted_34 = {
   "class": "payment-form mx-auto"
 };
-var _hoisted_48 = {
+var _hoisted_35 = {
   "class": "grid"
 };
-var _hoisted_49 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-    value: "",
-    disabled: ""
-  }, "اختر المناسبة..", -1 /* HOISTED */);
-});
-var _hoisted_50 = ["value"];
-var _hoisted_51 = ["textContent"];
-var _hoisted_52 = {
+var _hoisted_36 = ["value"];
+var _hoisted_37 = ["textContent"];
+var _hoisted_38 = {
   "class": "form-container",
   id: "payment-section"
 };
-var _hoisted_53 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "flex-col"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
-    "class": "title"
-  }, "أختار وسيلة الدفع")])], -1 /* HOISTED */);
-});
-var _hoisted_54 = {
+var _hoisted_39 = {
   "class": "payment-form mx-auto"
 };
-var _hoisted_55 = {
+var _hoisted_40 = {
   "class": "grid"
 };
-var _hoisted_56 = {
+var _hoisted_41 = {
   "class": "grid",
   style: {
     "flex-wrap": "nowrap"
   }
 };
-var _hoisted_57 = {
+var _hoisted_42 = {
   key: 0,
   "class": "cardSelect"
 };
-var _hoisted_58 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "payment-details",
-    "aria-hidden": "true"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "payment-type"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/mada-logo.png",
-    alt: "Right Logo"
-  })])], -1 /* HOISTED */);
-});
-var _hoisted_59 = {
+var _hoisted_43 = {
   key: 1,
   "class": "cardSelect"
 };
-var _hoisted_60 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "payment-details",
-    "aria-hidden": "true"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "payment-type"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/stc-logo.png",
-    alt: "Right Logo"
-  })])], -1 /* HOISTED */);
-});
-var _hoisted_61 = {
+var _hoisted_44 = {
   key: 2,
   "class": "cardSelect"
 };
-var _hoisted_62 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "payment-details",
-    "aria-hidden": "true"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": "payment-type"
-  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: "/assets/success/apple-pay-logo 1.png",
-    alt: "Right Logo"
-  })])], -1 /* HOISTED */);
-});
-var _hoisted_63 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "invoice"
-  }, "الفاتورة", -1 /* HOISTED */);
-});
-var _hoisted_64 = {
+var _hoisted_45 = {
   "class": "table-responsive w-100 table-show"
 };
-var _hoisted_65 = {
+var _hoisted_46 = {
   "class": "table"
 };
-var _hoisted_66 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    scope: "col"
-  }, "الغرفة"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    scope: "col"
-  }, "العدد"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    scope: "col"
-  }, "السعر"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
-    scope: "col"
-  }, "الاجمالي")])], -1 /* HOISTED */);
-});
-var _hoisted_67 = {
+var _hoisted_47 = {
   key: 0
 };
-var _hoisted_68 = {
+var _hoisted_48 = {
   scope: "row"
 };
-var _hoisted_69 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "الاجمالي", -1 /* HOISTED */);
-});
-var _hoisted_70 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "--", -1 /* HOISTED */);
-});
-var _hoisted_71 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("جميع الحقوق محفوظة ل "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "أميال سمارت")])], -1 /* HOISTED */);
-});
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _$props$shop$logo_url;
   var _component_VueDatePicker = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("VueDatePicker");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Head title=\"حجز الموعد\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Head title=\"حجز الموعد\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Head"), _cache[35] || (_cache[35] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("head", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("base", {
+    href: "../../../"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    charset: "utf-8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "description",
+    content: "The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue & Laravel versions. Grab your copy now and get life-time updates for free."
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "keywords",
+    content: "Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    name: "viewport",
+    content: "width=device-width, initial-scale=1"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:locale",
+    content: "en_US"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:type",
+    content: "article"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:title",
+    content: "Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:url",
+    content: "https://keenthemes.com/metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("meta", {
+    property: "og:site_name",
+    content: "Keenthemes | Metronic"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "canonical",
+    href: "https://preview.keenthemes.com/metronic8"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "shortcut icon",
+    href: "/assets/media/logos/favicon.ico"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Fonts"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("begin::Global Stylesheets Bundle(used by all pages)"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/plugins/global/plugins.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/css/style.bundle.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "/assets/css/newFormReservations.css",
+    rel: "stylesheet",
+    type: "text/css"
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("end::Global Stylesheets Bundle")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", _hoisted_1, [_cache[33] || (_cache[33] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "logo-left"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "/assets/success/new_logo.png",
+    alt: "Right Logo"
+  })])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_cache[12] || (_cache[12] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex-col",
+    style: {
+      "margin-bottom": "0"
+    }
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "title"
+  }, "تفاصيل الحجز"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "description"
+  }, "قم بملئ التفاصيل لتأكيد الحجز")], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     style: {
       "border-radius": "50%",
       "width": "50px",
@@ -640,7 +503,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     },
     src: (_$props$shop$logo_url = $props.shop.logo_url) !== null && _$props$shop$logo_url !== void 0 ? _$props$shop$logo_url : '/assets/media/logos/01.png',
     alt: "Left Logo"
-  }, null, 8 /* PROPS */, _hoisted_9)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_6)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     "class": "form-field",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
@@ -653,7 +516,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.name),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_8)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $setup.form.mobile = $event;
@@ -662,11 +525,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "form-field",
     type: "text",
     placeholder: "رقم الهاتف"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.mobile]]), _hoisted_13, $setup.form.errors.mobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.mobile]]), _cache[13] || (_cache[13] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "966+", -1 /* CACHED */)), $setup.form.errors.mobile ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.mobile),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_14)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 8 /* PROPS */, _hoisted_10)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     "class": "form-field",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
@@ -680,7 +543,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 1,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.count_people),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_15)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueDatePicker, {
+  }, null, 8 /* PROPS */, _hoisted_11)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_VueDatePicker, {
     "input-class-name": "form-control form-control-lg form-control-solid vue-date-picker-custom",
     "enable-time-picker": false,
     modelValue: $setup.form.reservation_date,
@@ -695,15 +558,28 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_date),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_17)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <select v-if=\"appointmentsTimes\"\n              class=\"form-control form-control-lg d-none form-control-solid form-control m-bootstrap-select m-bootstrap-select--solid m_selectpicker\"\n              v-model=\"form.reservation_time\" @focus=\"openTimePicker\" data-live-search=\"true\" data-size=\"5\"\n              data-width=\"100%\">\n              <option value=\"\" disabled>اختر الوقت..</option>\n              <option v-for=\"time in appointmentsTimes\" :value=\"time\" :key=\"time\">\n                {{ time }}\n              </option>\n            </select> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }, null, 8 /* PROPS */, _hoisted_13)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <select v-if=\"appointmentsTimes\"\n              class=\"form-control form-control-lg d-none form-control-solid form-control m-bootstrap-select m-bootstrap-select--solid m_selectpicker\"\n              v-model=\"form.reservation_time\" @focus=\"openTimePicker\" data-live-search=\"true\" data-size=\"5\"\n              data-width=\"100%\">\n              <option value=\"\" disabled>اختر الوقت..</option>\n              <option v-for=\"time in appointmentsTimes\" :value=\"time\" :key=\"time\">\n                {{ time }}\n              </option>\n            </select> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.getData();
     }, ["prevent"])),
     "class": "rooms-button"
-  }, " بـــحـــث "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [_hoisted_22, $props.shopSetting.payment_method != 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_23, "يوجد دفع عند الحجز")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_24, "لايوجد دفع عند الحجز"))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  }, " بـــحـــث "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_cache[15] || (_cache[15] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"item\" data-v-0a14c218><img style=\"border-radius:50%;width:12px;\" src=\"/assets/success/impoortant.svg\" alt=\"Left Logo\" data-v-0a14c218><p class=\"impoortant\" data-v-0a14c218>تنوية هام</p></div><div class=\"item\" data-v-0a14c218><img style=\"border-radius:50%;width:12px;\" src=\"/assets/success/error.svg\" alt=\"Left Logo\" data-v-0a14c218><p class=\"error\" data-v-0a14c218> في حالة عدم الحضور خلال 10 دقائق يعتبر الحجز ملغي </p></div>", 2)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_cache[14] || (_cache[14] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    style: {
+      "border-radius": "50%",
+      "width": "12px"
+    },
+    src: "/assets/success/error.svg",
+    alt: "Left Logo"
+  }, null, -1 /* CACHED */)), $props.shopSetting.payment_method != 2 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_16, "يوجد دفع عند الحجز")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_17, "لايوجد دفع عند الحجز"))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: $props.shop.cover != null ? $props.shop.cover_url : '/assets/success/card-image-3.png',
     "class": "reservation-image caverImage"
-  }, null, 8 /* PROPS */, _hoisted_25)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, null, 8 /* PROPS */, _hoisted_18)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_19, [_cache[24] || (_cache[24] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex-col"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "title"
+  }, "اختار الغرفة المناسبة"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "description"
+  }, " من بين المزيد من الخيارات يمكنك اختيار الغرفة المناسبة ")])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "flex-wrap",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([$setup.form.getDataServices.length > 2 ? {
       'justify-content': 'flex-start'
@@ -722,18 +598,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         'padding': '0px 20px'
       }]),
       "class": "container"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [service.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [service.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: 0,
       "class": "decrement-btn",
       onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
         return service.initialCounter > 0 ? service.initialCounter-- : false, $setup.checkPaymentShow(), $setup.totalAmount -= service.price;
       }, ["prevent"])
-    }, "-", 8 /* PROPS */, _hoisted_29)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), service.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.initialCounter), 1 /* TEXT */)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    }, "-", 8 /* PROPS */, _hoisted_21)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), service.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.initialCounter), 1 /* TEXT */)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
       "class": "increment-btn",
       onClick: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
         return service.initialCounter++, $setup.paymentShow(), $setup.totalAmount += service.price;
       }, ["prevent"])
-    }, "+", 8 /* PROPS */, _hoisted_31)])], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Swiper"], {
+    }, "+", 8 /* PROPS */, _hoisted_23)])], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Swiper"], {
       "grab-cursor": "",
       "update-on-window-resize": "",
       pagination: {
@@ -745,7 +621,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onSwiper: _ctx.init
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("> "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(service.media, function (img) {
+        return [_cache[16] || (_cache[16] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("> ", -1 /* CACHED */)), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(service.media, function (img) {
           return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["SwiperSlide"], {
             key: img.name
           }, {
@@ -753,29 +629,47 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
               return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
                 "class": "card-image",
                 src: "/services/uploads/".concat(img.name)
-              }, null, 8 /* PROPS */, _hoisted_32)];
+              }, null, 8 /* PROPS */, _hoisted_24)];
             }),
             _: 2 /* DYNAMIC */
           }, 1024 /* DYNAMIC_SLOTS */);
-        }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ... ")];
+        }), 128 /* KEYED_FRAGMENT */)), _cache[17] || (_cache[17] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" ... ", -1 /* CACHED */))];
       }),
+
       _: 2 /* DYNAMIC */
-    }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["onSwiper"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.disc), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_36, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.price) + " ريال", 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.count_people), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [_hoisted_41, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.area), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.adv), 1 /* TEXT */)]), _hoisted_44])])]);
-  }), 128 /* KEYED_FRAGMENT */))], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_45, [_hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_48, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["onSwiper"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.disc), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.price) + " ريال", 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [_cache[18] || (_cache[18] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: "/assets/success/profile.svg"
+    }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.count_people), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_cache[19] || (_cache[19] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: "/assets/success/dimentions.svg"
+    }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.area), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_cache[20] || (_cache[20] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: "/assets/success/cigerites.svg"
+    }, null, -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(service.adv), 1 /* TEXT */)]), _cache[21] || (_cache[21] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+      "class": "item-container"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: "/assets/success/time.svg"
+    }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "وقت الدخول : 05:22 م")], -1 /* CACHED */))])])]);
+  }), 128 /* KEYED_FRAGMENT */))], 4 /* STYLE */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_33, [_cache[23] || (_cache[23] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex-col"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "title"
+  }, "معلومات اضافية")])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "class": "form-control form-control-lg form-control-solid",
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return $setup.form.type_occasion_id = $event;
     })
-  }, [_hoisted_49, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.typeOccasions, function (type_occasion) {
+  }, [_cache[22] || (_cache[22] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+    value: "",
+    disabled: ""
+  }, "اختر المناسبة..", -1 /* CACHED */)), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.typeOccasions, function (type_occasion) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: type_occasion.id,
       value: type_occasion.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type_occasion.title), 9 /* TEXT, PROPS */, _hoisted_50);
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type_occasion.title), 9 /* TEXT, PROPS */, _hoisted_36);
   }), 128 /* KEYED_FRAGMENT */))], 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.form.type_occasion_id]]), $setup.form.errors.reservation_time ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
     key: 0,
     textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.form.errors.reservation_time),
     "class": "text-danger text-xs mt-1"
-  }, null, 8 /* PROPS */, _hoisted_51)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+  }, null, 8 /* PROPS */, _hoisted_37)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
     style: {
       "width": "100%"
     },
@@ -800,7 +694,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "margin": "10px auto",
       "width": "50%"
     }
-  }, " اكمال الدفع ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_52, [_hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p class=\"title\">أختار وسيلة الدفع</p> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [$props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, " اكمال الدفع ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_38, [_cache[32] || (_cache[32] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "flex-col"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", {
+    "class": "title"
+  }, "أختار وسيلة الدفع")])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <p class=\"title\">أختار وسيلة الدفع</p> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [$props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     name: "payment",
     "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
       return $setup.form.paymenttype = $event;
@@ -808,7 +706,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     value: "6",
     "class": "radio",
     type: "radio"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _hoisted_58])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_59, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _cache[25] || (_cache[25] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "payment-details",
+    "aria-hidden": "true"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "payment-type"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "/assets/success/mada-logo.png",
+    alt: "Right Logo"
+  })])], -1 /* CACHED */))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
       return $setup.form.paymenttype = $event;
     }),
@@ -817,7 +723,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "payment",
     "class": "radio",
     type: "radio"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _hoisted_60])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _cache[26] || (_cache[26] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "payment-details",
+    "aria-hidden": "true"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "payment-type"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "/assets/success/stc-logo.png",
+    alt: "Right Logo"
+  })])], -1 /* CACHED */))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.shopSetting.payment_method != 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     required: "",
     "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
       return $setup.form.paymenttype = $event;
@@ -826,11 +740,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "payment",
     "class": "radio",
     type: "radio"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _hoisted_62])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.form.getDataServices, function (row) {
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelRadio, $setup.form.paymenttype]]), _cache[27] || (_cache[27] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "payment-details",
+    "aria-hidden": "true"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "payment-type"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "/assets/success/apple-pay-logo 1.png",
+    alt: "Right Logo"
+  })])], -1 /* CACHED */))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _cache[31] || (_cache[31] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "invoice"
+  }, "الفاتورة", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_46, [_cache[30] || (_cache[30] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+    scope: "col"
+  }, "الغرفة"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+    scope: "col"
+  }, "العدد"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+    scope: "col"
+  }, "السعر"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+    scope: "col"
+  }, "الاجمالي")])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.form.getDataServices, function (row) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
       key: row.id
-    }, [row.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.disc), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.initialCounter), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.price) + " ريال", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.price * row.initialCounter) + " ريال", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64 /* STABLE_FRAGMENT */);
-  }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tfoot", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [_hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.paymenCounter), 1 /* TEXT */), _hoisted_70, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.totalAmount) + " ريال", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    }, [row.initialCounter > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.disc), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.initialCounter), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.price) + " ريال", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(row.price * row.initialCounter) + " ريال", 1 /* TEXT */)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64 /* STABLE_FRAGMENT */);
+  }), 128 /* KEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tfoot", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [_cache[28] || (_cache[28] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "الاجمالي", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.paymenCounter), 1 /* TEXT */), _cache[29] || (_cache[29] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "--", -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.totalAmount) + " ريال", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[11] || (_cache[11] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
       return $setup.submit();
     }, ["prevent"])),
@@ -839,7 +771,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "margin-top": "4px"
     },
     "class": "rooms-button"
-  }, " تأكيد الحجز ")])])]), _hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <script src=\"counter.js\"></script> ")])], 64 /* STABLE_FRAGMENT */);
+  }, " تأكيد الحجز ")])])]), _cache[34] || (_cache[34] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("جميع الحقوق محفوظة ل "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "أميال سمارت")])], -1 /* CACHED */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <script src=\"counter.js\"></script> ")])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -2805,10 +2737,10 @@ function isnan (val) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/navigation.css":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/navigation.css ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/navigation.css":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/navigation.css ***!
+  \***************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2829,10 +2761,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --swiper-navigation-size: 4
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/pagination.css":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/pagination.css ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/pagination.css":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/pagination.css ***!
+  \***************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2853,10 +2785,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  /*\n  --swiper-pagination-c
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/scrollbar.css":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/scrollbar.css ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/scrollbar.css":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/scrollbar.css ***!
+  \**************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2877,10 +2809,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  /*\n  --swiper-scrollbar-bo
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper-bundle.css":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper-bundle.css ***!
-  \********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper-bundle.css":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper-bundle.css ***!
+  \**********************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2901,10 +2833,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/**\n * Swiper 11.0.7\n * Most modern 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper.css":
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper.css ***!
-  \*************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper.css":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper.css ***!
+  \***************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2925,10 +2857,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/**\n * Swiper 11.0.7\n * Most modern 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2949,10 +2881,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n#app {\n  z-index: 0 !important;\n}\
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css":
-/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2966,7 +2898,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-0a14c218] {\n  direction: rtl;\n  font-family: \"Somar\", sans-serif !important;\n}\n\n/****************************************************/\n.grid[data-v-0a14c218] {\n  display: flex;\n  flex-wrap: wrap;\n  grid-gap: var(--card-padding);\n  width: 400px;\n  margin: 0 auto;\n  padding: 0;\n}\n.cardSelect[data-v-0a14c218] {\n  background-color: #fff;\n  border-radius: var(--card-radius);\n  position: relative;\n}\n.radio[data-v-0a14c218] {\n  font-size: inherit;\n  margin: 0;\n  position: absolute;\n  opacity: 1;\n  right: calc(var(--card-padding) + var(--radio-border-width));\n  top: calc(var(--card-padding) + var(--radio-border-width));\n}\n@supports (-webkit-appearance: none) or (-moz-appearance: none) {\n.radio[data-v-0a14c218] {\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    background: #fff;\n    border-radius: 50%;\n    cursor: pointer;\n    height: var(--radio-size);\n    outline: 1px solid rgba(0, 0, 0, 0.137);\n    transition: background 0.2s ease-out, border-color 0.2s ease-out;\n    width: var(--radio-size);\n}\n.radio[data-v-0a14c218]::after {\n    border: var(--radio-border-width) solid #fff;\n    border-top: 0;\n    border-left: 0;\n    content: \"\";\n    display: block;\n    height: 0.75rem;\n    left: 24%;\n    position: absolute;\n    top: 50%;\n    transform: rotate(45deg) translate(-50%, -59%);\n    width: 0.325rem;\n}\n.radio[data-v-0a14c218]:checked {\n    background: var(--color-green);\n    opacity: 1;\n    outline: none;\n}\n.cardSelect:hover .radio[data-v-0a14c218] {\n    border-color: var(--color-dark-gray);\n}\n.cardSelect:hover .radio[data-v-0a14c218]:checked {\n    border-color: var(--primary-dark-color);\n}\n}\n.payment-details[data-v-0a14c218] {\n  border: var(--radio-border-width) solid var(--color-gray);\n  border-radius: var(--card-radius);\n  cursor: pointer;\n  opacity: 0.3;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 100px;\n  min-height: 100px;\n  flex-direction: column;\n  padding: var(--card-padding);\n  transition: border-color 0.2s ease-out;\n}\n.reservation-image[data-v-0a14c218] {\n  width: 320px;\n  height: 530px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 40px;\n}\n.cardSelect:hover .payment-details[data-v-0a14c218] {\n  border-color: var(--color-dark-gray);\n}\n.radio:checked~.payment-details[data-v-0a14c218] {\n  border-color: var(--primary-dark-color);\n  opacity: 1;\n}\n.radio:focus~.payment-details[data-v-0a14c218] {\n  box-shadow: 0 0 0 2px var(--color-dark-gray);\n}\n.radio:disabled~.payment-details[data-v-0a14c218] {\n  color: var(--color-dark-gray);\n  cursor: default;\n}\n.radio:disabled~.payment-details .payment-type[data-v-0a14c218] {\n  color: var(--color-dark-gray);\n}\n.cardSelect:hover .radio:disabled~.payment-details[data-v-0a14c218] {\n  border-color: var(--color-gray);\n  box-shadow: none;\n}\n.cardSelect:hover .radio[data-v-0a14c218]:disabled {\n  border-color: var(--color-gray);\n}\n.payment-type[data-v-0a14c218] {\n  color: var(--color-green);\n  font-size: 1.5rem;\n  font-weight: bold;\n  line-height: 1em;\n}\n.slash[data-v-0a14c218] {\n  font-weight: normal;\n}\n.payment-cycle[data-v-0a14c218] {\n  font-size: 2rem;\n  font-variant: none;\n  border-bottom: none;\n  cursor: inherit;\n  text-decoration: none;\n}\n.hidden-visually[data-v-0a14c218] {\n  border: 0;\n  clip: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  white-space: nowrap;\n  width: 1px;\n}\n.form-field[data-v-0a14c218] {\n  display: block;\n\n  padding: 8px 16px;\n  line-height: 25px;\n  font-size: 14px;\n  font-weight: 500;\n  font-family: inherit;\n  border-radius: 6px;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  color: var(--input-color);\n  border: 1px solid var(--input-border);\n  background: var(--input-background);\n  transition: border 0.3s ease;\n}\n.form-field[data-v-0a14c218]::-moz-placeholder {\n  color: var(--input-placeholder);\n}\n.form-field[data-v-0a14c218]::placeholder {\n  color: var(--input-placeholder);\n}\n.form-field[data-v-0a14c218]:focus {\n  outline: none;\n  border-color: var(--input-border-focus);\n}\n.form-group[data-v-0a14c218] {\n  position: relative;\n  display: flex;\n  width: 100%;\n}\n.form-group>span[data-v-0a14c218],\n.form-group .form-field[data-v-0a14c218] {\n  white-space: nowrap;\n  display: block;\n}\n.form-group>span[data-v-0a14c218]:not(:first-child):not(:last-child),\n.form-group .form-field[data-v-0a14c218]:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.form-group>span[data-v-0a14c218]:first-child,\n.form-group .form-field[data-v-0a14c218]:first-child {\n  border-radius: 0px 6px 6px 0px;\n}\n.form-group>span[data-v-0a14c218]:last-child,\n.form-group .form-field[data-v-0a14c218]:last-child {\n  border-radius: 6px 0px 0px 6px;\n}\n.form-group>span[data-v-0a14c218]:not(:first-child) {\n  margin-left: -1px;\n}\n.form-group .form-field[data-v-0a14c218] {\n  position: relative;\n  z-index: 1;\n  flex: 1 1 auto;\n  width: 1%;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n.form-group>span[data-v-0a14c218] {\n  text-align: center;\n  padding: 8px 12px;\n  font-size: 14px;\n  line-height: 25px;\n  color: var(--group-color);\n  border: 1px solid var(--group-border);\n  border-right: 0px;\n  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;\n}\n.form-group:focus-within>span[data-v-0a14c218] {\n  border-color: var(--group-border-focus);\n}\ninput[data-v-0a14c218] {\n  direction: rtl;\n}\nheader[data-v-0a14c218] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  padding: 20px 80px;\n}\n.logo-left[data-v-0a14c218],\n.logo-right[data-v-0a14c218] {\n  max-width: 100px;\n}\n.logo-left img[data-v-0a14c218],\n.logo-right img[data-v-0a14c218] {\n  width: 100%;\n  height: auto;\n}\nsection[data-v-0a14c218] {\n  margin-top: 4rem;\n  padding: 10px;\n  padding: 20px 80px;\n}\n.form-container[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form[data-v-0a14c218] {\n  width: 350px;\n  padding: 30px;\n  border-radius: 10px;\n}\n.payment-form[data-v-0a14c218] {\n  max-width: 500px;\n  background-color: white;\n  padding: 30px 10px;\n  border-radius: 10px;\n  margin-top: 2rem;\n  border: 1px solid #083a6933;\n}\n.header-section[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n.flex[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n}\n.title[data-v-0a14c218] {\n  font-weight: 800;\n  font-size: 20px;\n  line-height: 15px;\n  color: var(--primary-color);\n}\n.description[data-v-0a14c218] {\n  font-size: 12px;\n  line-height: 15px;\n  font-weight: 300;\n  color: var(--description-color);\n}\n.flex-col[data-v-0a14c218] {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  margin-bottom: 5rem;\n}\n.flex-col-2[data-v-0a14c218] {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.rooms-button[data-v-0a14c218] {\n  background-color: var(--primary-color);\n  color: white;\n  border-radius: 16px;\n  padding: 10px;\n  cursor: pointer;\n  border: none;\n}\n.impoortant[data-v-0a14c218] {\n  font-size: 10px;\n  font-weight: 600;\n  color: var(--primary-dark-color);\n}\n.item[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  gap: 5px;\n}\n.error[data-v-0a14c218] {\n  color: #ff6c6c;\n  font-size: 8px;\n}\n.info-con[data-v-0a14c218] {\n  margin-top: 10px;\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  padding: 10px;\n  border-radius: 16px;\n  border: 1px solid #083a6933;\n  background-color: #f3f3f34f;\n}\n.card[data-v-0a14c218] {\n  cursor: pointer;\n  position: relative;\n  max-width: 320px;\n  min-width: 320px;\n  border: 1px solid #e3e3e3;\n  border-radius: 10px;\n  background: white;\n}\n.card img[data-v-0a14c218] {\n  border-top-right-radius: 10px;\n  border-top-left-radius: 10px;\n}\n.card-image[data-v-0a14c218] {\n  height: 194px;\n  width: 100%;\n}\n.info-container[data-v-0a14c218] {\n  padding: 10px 30px;\n  background-color: white;\n  border-bottom-left-radius: 10px;\n  border-bottom-right-radius: 10px;\n}\n.info-section[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 10px 0px;\n}\n.item-container img[data-v-0a14c218] {\n  width: 12px;\n  border-radius: 0 !important;\n}\n.info-title[data-v-0a14c218] {\n  font-weight: 700;\n  font-size: 16px;\n  color: var(--text-color);\n}\n.info-price[data-v-0a14c218] {\n  font-weight: 600;\n  color: var(--primary-color);\n}\n.detail-section[data-v-0a14c218] {\n  display: grid;\n  grid-template-columns: repeat(2, auto);\n}\n.item-container[data-v-0a14c218] {\n  padding: 10px 0px;\n  display: flex;\n  gap: 5px;\n}\n.item-container p[data-v-0a14c218] {\n  font-size: 12px;\n  font-weight: 400;\n  color: var(--info-color);\n}\nfooter[data-v-0a14c218] {\n  color: white;\n  text-align: center;\n  margin-top: 40px;\n\n  margin-bottom: 20px;\n  width: 100%;\n}\nfooter h3[data-v-0a14c218] {\n  font-weight: 600;\n  color: var(--primary-dark-color);\n}\nfooter span[data-v-0a14c218] {\n  color: var(--primary-color);\n  font-weight: 700;\n}\n.flex-wrap[data-v-0a14c218] {\n  display: flex;\n  gap: 15px;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n}\ninput[data-v-0a14c218],\nselect[data-v-0a14c218] {\n  padding: 10px;\n  border-radius: 10px;\n}\ntextarea[data-v-0a14c218] {\n  resize: none;\n  margin-bottom: 4px;\n}\n.container[data-v-0a14c218] {\n  position: absolute;\n  left: 10px;\n  z-index: 10;\n  top: 150px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 10px;\n  align-items: center;\n  width: 90px;\n  height: 40px;\n  border-radius: 33px;\n}\n#rooms-section[data-v-0a14c218] {\n  display: none;\n}\n#payment-section[data-v-0a14c218] {\n  display: none;\n  align-items: center;\n  justify-content: center;\n}\n#note-section[data-v-0a14c218] {\n  display: block;\n  align-items: center !important;\n  justify-content: center !important;\n}\n.counter[data-v-0a14c218] {\n  width: 20px;\n  gap: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.increment-btn[data-v-0a14c218],\n.decrement-btn[data-v-0a14c218] {\n  height: 25px;\n  width: 25px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  font-weight: 1000;\n  -webkit-border-radius: 50%;\n  background-color: white;\n  border: 2px solid white;\n  color: #115da6;\n}\n.counter-value[data-v-0a14c218] {\n  height: 20px;\n  width: 10px;\n  font-weight: 600;\n  border-radius: 10px;\n  color: #115da6;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.swiper[data-v-0a14c218] {\n  width: 100%;\n}\n.swiper-wrapper[data-v-0a14c218] {\n  cursor: grab;\n}\n#app[data-v-0a14c218] {\n  z-index: 999;\n}\n.table-show[data-v-0a14c218] {\n  border: 1px solid rgb(214, 214, 214);\n  padding: 1rem;\n  border-radius: 0.625rem;\n}\n.table-show tr[data-v-0a14c218] {\n  border-bottom: 1px solid rgb(214, 214, 214)\n}\n.table-show tfoot tr[data-v-0a14c218] {\n  color : rgb(44, 41, 106) !important;\n  font-weight: 900 !important;\n  border-top: 1px solid rgb(214, 214, 214)\n}\n.invoice[data-v-0a14c218]{\n  margin: inherit;\n  margin-top: 10px;\n  color: rgb(117, 117, 117);\n  font-size: 1.5rem;\n}\n.table-show tbody td[data-v-0a14c218],\n.table-show tfoot tr[data-v-0a14c218],\n.table-show thead th[data-v-0a14c218] {\n  color: rgb(117, 117, 117);\n  padding: 1.5rem 0.5rem;\n  font-weight: 700;\n}\n@media (max-width: 820px){\n.table-responsive .table[data-v-0a14c218]{\n    width: 100% !important;\n}\n.payment-form[data-v-0a14c218] {\n    max-width: 380px;\n}\n}\n@media only screen and (max-width: 600px) {\nbody[data-v-0a14c218] {\n    position: relative;\n    z-index: -1;\n}\n.payment-form[data-v-0a14c218] {\n    max-width: 400px;\n}\n.table-responsive .table[data-v-0a14c218]{\n    width: 100%;\n}\n.flex-wrap[data-v-0a14c218] {\n    justify-content: center !important;\n}\n.reservation-image[data-v-0a14c218] {\n    position: absolute;\n    top: 0;\n    z-index: -1;\n    width: 101%;\n    border-radius: 0;\n    height: 280px;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\nheader[data-v-0a14c218] {\n    justify-content: center;\n}\n.logo-right>img[data-v-0a14c218] {\n    width: 100px !important;\n    height: 100px !important;\n}\n.header-section[data-v-0a14c218] {\n    flex-direction: column-reverse;\n    gap: 15px;\n    text-align: center;\n}\nsection[data-v-0a14c218] {\n    padding: 0px;\n}\n.form[data-v-0a14c218] {\n    width: 100%;\n    background: white;\n    margin-top: 125px;\n    border-radius: 24px;\n}\n.flex-col[data-v-0a14c218] {\n    width: 100%;\n    text-align: center;\n}\n.grid[data-v-0a14c218] {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    grid-gap: var(--card-padding);\n    width: 100%;\n    padding: 0;\n}\n.cardSelect[data-v-0a14c218] {\n    width: 100%;\n}\nheader[data-v-0a14c218] {\n    padding: 15px;\n}\n.logo-left img[data-v-0a14c218],\n  .logo-right img[data-v-0a14c218] {\n    width: 80%;\n    height: auto;\n}\n}\n@media only screen and (max-width: 450px) {\n.card[data-v-0a14c218] {\n    width: 98%;\n    max-width: 98%;\n    min-width: 98%;\n}\n.table-responsive .table[data-v-0a14c218]{\n    width: 100%;\n}\n.swiper-wrapper[data-v-0a14c218] {\n    cursor: grab;\n    width: 98%;\n}\n.card-image[data-v-0a14c218] {\n    width: 100%;\n}\n.swiper[data-v-0a14c218] {\n    widows: 102%;\n}\n.flex-wrap[data-v-0a14c218] {\n    margin: 1rem;\n    width: 100%;\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n[data-v-0a14c218] {\n  direction: rtl;\n  font-family: \"Somar\", sans-serif !important;\n}\n\n/****************************************************/\n.grid[data-v-0a14c218] {\n  display: flex;\n  flex-wrap: wrap;\n  grid-gap: var(--card-padding);\n  width: 400px;\n  margin: 0 auto;\n  padding: 0;\n}\n.cardSelect[data-v-0a14c218] {\n  background-color: #fff;\n  border-radius: var(--card-radius);\n  position: relative;\n}\n.radio[data-v-0a14c218] {\n  font-size: inherit;\n  margin: 0;\n  position: absolute;\n  opacity: 1;\n  right: calc(var(--card-padding) + var(--radio-border-width));\n  top: calc(var(--card-padding) + var(--radio-border-width));\n}\n@supports (-webkit-appearance: none) or (-moz-appearance: none) {\n.radio[data-v-0a14c218] {\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    background: #fff;\n    border-radius: 50%;\n    cursor: pointer;\n    height: var(--radio-size);\n    outline: 1px solid rgba(0, 0, 0, 0.137);\n    transition: background 0.2s ease-out, border-color 0.2s ease-out;\n    width: var(--radio-size);\n}\n.radio[data-v-0a14c218]::after {\n    border: var(--radio-border-width) solid #fff;\n    border-top: 0;\n    border-left: 0;\n    content: \"\";\n    display: block;\n    height: 0.75rem;\n    left: 24%;\n    position: absolute;\n    top: 50%;\n    transform: rotate(45deg) translate(-50%, -59%);\n    width: 0.325rem;\n}\n.radio[data-v-0a14c218]:checked {\n    background: var(--color-green);\n    opacity: 1;\n    outline: none;\n}\n.cardSelect:hover .radio[data-v-0a14c218] {\n    border-color: var(--color-dark-gray);\n}\n.cardSelect:hover .radio[data-v-0a14c218]:checked {\n    border-color: var(--primary-dark-color);\n}\n}\n.payment-details[data-v-0a14c218] {\n  border: var(--radio-border-width) solid var(--color-gray);\n  border-radius: var(--card-radius);\n  cursor: pointer;\n  opacity: 0.3;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 100px;\n  min-height: 100px;\n  flex-direction: column;\n  padding: var(--card-padding);\n  transition: border-color 0.2s ease-out;\n}\n.reservation-image[data-v-0a14c218] {\n  width: 320px;\n  height: 530px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-radius: 40px;\n}\n.cardSelect:hover .payment-details[data-v-0a14c218] {\n  border-color: var(--color-dark-gray);\n}\n.radio:checked~.payment-details[data-v-0a14c218] {\n  border-color: var(--primary-dark-color);\n  opacity: 1;\n}\n.radio:focus~.payment-details[data-v-0a14c218] {\n  box-shadow: 0 0 0 2px var(--color-dark-gray);\n}\n.radio:disabled~.payment-details[data-v-0a14c218] {\n  color: var(--color-dark-gray);\n  cursor: default;\n}\n.radio:disabled~.payment-details .payment-type[data-v-0a14c218] {\n  color: var(--color-dark-gray);\n}\n.cardSelect:hover .radio:disabled~.payment-details[data-v-0a14c218] {\n  border-color: var(--color-gray);\n  box-shadow: none;\n}\n.cardSelect:hover .radio[data-v-0a14c218]:disabled {\n  border-color: var(--color-gray);\n}\n.payment-type[data-v-0a14c218] {\n  color: var(--color-green);\n  font-size: 1.5rem;\n  font-weight: bold;\n  line-height: 1em;\n}\n.slash[data-v-0a14c218] {\n  font-weight: normal;\n}\n.payment-cycle[data-v-0a14c218] {\n  font-size: 2rem;\n  font-variant: none;\n  border-bottom: none;\n  cursor: inherit;\n  text-decoration: none;\n}\n.hidden-visually[data-v-0a14c218] {\n  border: 0;\n  clip: rect(0, 0, 0, 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  white-space: nowrap;\n  width: 1px;\n}\n.form-field[data-v-0a14c218] {\n  display: block;\n\n  padding: 8px 16px;\n  line-height: 25px;\n  font-size: 14px;\n  font-weight: 500;\n  font-family: inherit;\n  border-radius: 6px;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  color: var(--input-color);\n  border: 1px solid var(--input-border);\n  background: var(--input-background);\n  transition: border 0.3s ease;\n}\n.form-field[data-v-0a14c218]::-moz-placeholder {\n  color: var(--input-placeholder);\n}\n.form-field[data-v-0a14c218]::placeholder {\n  color: var(--input-placeholder);\n}\n.form-field[data-v-0a14c218]:focus {\n  outline: none;\n  border-color: var(--input-border-focus);\n}\n.form-group[data-v-0a14c218] {\n  position: relative;\n  display: flex;\n  width: 100%;\n}\n.form-group>span[data-v-0a14c218],\n.form-group .form-field[data-v-0a14c218] {\n  white-space: nowrap;\n  display: block;\n}\n.form-group>span[data-v-0a14c218]:not(:first-child):not(:last-child),\n.form-group .form-field[data-v-0a14c218]:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.form-group>span[data-v-0a14c218]:first-child,\n.form-group .form-field[data-v-0a14c218]:first-child {\n  border-radius: 0px 6px 6px 0px;\n}\n.form-group>span[data-v-0a14c218]:last-child,\n.form-group .form-field[data-v-0a14c218]:last-child {\n  border-radius: 6px 0px 0px 6px;\n}\n.form-group>span[data-v-0a14c218]:not(:first-child) {\n  margin-left: -1px;\n}\n.form-group .form-field[data-v-0a14c218] {\n  position: relative;\n  z-index: 1;\n  flex: 1 1 auto;\n  width: 1%;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n.form-group>span[data-v-0a14c218] {\n  text-align: center;\n  padding: 8px 12px;\n  font-size: 14px;\n  line-height: 25px;\n  color: var(--group-color);\n  border: 1px solid var(--group-border);\n  border-right: 0px;\n  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;\n}\n.form-group:focus-within>span[data-v-0a14c218] {\n  border-color: var(--group-border-focus);\n}\ninput[data-v-0a14c218] {\n  direction: rtl;\n}\nheader[data-v-0a14c218] {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  padding: 20px 80px;\n}\n.logo-left[data-v-0a14c218],\n.logo-right[data-v-0a14c218] {\n  max-width: 100px;\n}\n.logo-left img[data-v-0a14c218],\n.logo-right img[data-v-0a14c218] {\n  width: 100%;\n  height: auto;\n}\nsection[data-v-0a14c218] {\n  margin-top: 4rem;\n  padding: 10px;\n  padding: 20px 80px;\n}\n.form-container[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.form[data-v-0a14c218] {\n  width: 350px;\n  padding: 30px;\n  border-radius: 10px;\n}\n.payment-form[data-v-0a14c218] {\n  max-width: 500px;\n  background-color: white;\n  padding: 30px 10px;\n  border-radius: 10px;\n  margin-top: 2rem;\n  border: 1px solid #083a6933;\n}\n.header-section[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin-bottom: 2rem;\n}\n.flex[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  width: 100%;\n}\n.title[data-v-0a14c218] {\n  font-weight: 800;\n  font-size: 20px;\n  line-height: 15px;\n  color: var(--primary-color);\n}\n.description[data-v-0a14c218] {\n  font-size: 12px;\n  line-height: 15px;\n  font-weight: 300;\n  color: var(--description-color);\n}\n.flex-col[data-v-0a14c218] {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  margin-bottom: 5rem;\n}\n.flex-col-2[data-v-0a14c218] {\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.rooms-button[data-v-0a14c218] {\n  background-color: var(--primary-color);\n  color: white;\n  border-radius: 16px;\n  padding: 10px;\n  cursor: pointer;\n  border: none;\n}\n.impoortant[data-v-0a14c218] {\n  font-size: 10px;\n  font-weight: 600;\n  color: var(--primary-dark-color);\n}\n.item[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  gap: 5px;\n}\n.error[data-v-0a14c218] {\n  color: #ff6c6c;\n  font-size: 8px;\n}\n.info-con[data-v-0a14c218] {\n  margin-top: 10px;\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  padding: 10px;\n  border-radius: 16px;\n  border: 1px solid #083a6933;\n  background-color: #f3f3f34f;\n}\n.card[data-v-0a14c218] {\n  cursor: pointer;\n  position: relative;\n  max-width: 320px;\n  min-width: 320px;\n  border: 1px solid #e3e3e3;\n  border-radius: 10px;\n  background: white;\n}\n.card img[data-v-0a14c218] {\n  border-top-right-radius: 10px;\n  border-top-left-radius: 10px;\n}\n.card-image[data-v-0a14c218] {\n  height: 194px;\n  width: 100%;\n}\n.info-container[data-v-0a14c218] {\n  padding: 10px 30px;\n  background-color: white;\n  border-bottom-left-radius: 10px;\n  border-bottom-right-radius: 10px;\n}\n.info-section[data-v-0a14c218] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  margin: 10px 0px;\n}\n.item-container img[data-v-0a14c218] {\n  width: 12px;\n  border-radius: 0 !important;\n}\n.info-title[data-v-0a14c218] {\n  font-weight: 700;\n  font-size: 16px;\n  color: var(--text-color);\n}\n.info-price[data-v-0a14c218] {\n  font-weight: 600;\n  color: var(--primary-color);\n}\n.detail-section[data-v-0a14c218] {\n  display: grid;\n  grid-template-columns: repeat(2, auto);\n}\n.item-container[data-v-0a14c218] {\n  padding: 10px 0px;\n  display: flex;\n  gap: 5px;\n}\n.item-container p[data-v-0a14c218] {\n  font-size: 12px;\n  font-weight: 400;\n  color: var(--info-color);\n}\nfooter[data-v-0a14c218] {\n  color: white;\n  text-align: center;\n  margin-top: 40px;\n\n  margin-bottom: 20px;\n  width: 100%;\n}\nfooter h3[data-v-0a14c218] {\n  font-weight: 600;\n  color: var(--primary-dark-color);\n}\nfooter span[data-v-0a14c218] {\n  color: var(--primary-color);\n  font-weight: 700;\n}\n.flex-wrap[data-v-0a14c218] {\n  display: flex;\n  gap: 15px;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: center;\n}\ninput[data-v-0a14c218],\nselect[data-v-0a14c218] {\n  padding: 10px;\n  border-radius: 10px;\n}\ntextarea[data-v-0a14c218] {\n  resize: none;\n  margin-bottom: 4px;\n}\n.container[data-v-0a14c218] {\n  position: absolute;\n  left: 10px;\n  z-index: 10;\n  top: 150px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 10px;\n  align-items: center;\n  width: 90px;\n  height: 40px;\n  border-radius: 33px;\n}\n#rooms-section[data-v-0a14c218] {\n  display: none;\n}\n#payment-section[data-v-0a14c218] {\n  display: none;\n  align-items: center;\n  justify-content: center;\n}\n#note-section[data-v-0a14c218] {\n  display: block;\n  align-items: center !important;\n  justify-content: center !important;\n}\n.counter[data-v-0a14c218] {\n  width: 20px;\n  gap: 8px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.increment-btn[data-v-0a14c218],\n.decrement-btn[data-v-0a14c218] {\n  height: 25px;\n  width: 25px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  font-weight: 1000;\n  -webkit-border-radius: 50%;\n  background-color: white;\n  border: 2px solid white;\n  color: #115da6;\n}\n.counter-value[data-v-0a14c218] {\n  height: 20px;\n  width: 10px;\n  font-weight: 600;\n  border-radius: 10px;\n  color: #115da6;\n  font-size: 16px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.swiper[data-v-0a14c218] {\n  width: 100%;\n}\n.swiper-wrapper[data-v-0a14c218] {\n  cursor: grab;\n}\n#app[data-v-0a14c218] {\n  z-index: 999;\n}\n.table-show[data-v-0a14c218] {\n  border: 1px solid rgb(214, 214, 214);\n  padding: 1rem;\n  border-radius: 0.625rem;\n}\n.table-show tr[data-v-0a14c218] {\n  border-bottom: 1px solid rgb(214, 214, 214)\n}\n.table-show tfoot tr[data-v-0a14c218] {\n  color : rgb(44, 41, 106) !important;\n  font-weight: 900 !important;\n  border-top: 1px solid rgb(214, 214, 214)\n}\n.invoice[data-v-0a14c218]{\n  margin: inherit;\n  margin-top: 10px;\n  color: rgb(117, 117, 117);\n  font-size: 1.5rem;\n}\n.table-show tbody td[data-v-0a14c218],\n.table-show tfoot tr[data-v-0a14c218],\n.table-show thead th[data-v-0a14c218] {\n  color: rgb(117, 117, 117);\n  padding: 1.5rem 0.5rem;\n  font-weight: 700;\n}\n@media (max-width: 820px){\n.table-responsive .table[data-v-0a14c218]{\n    width: 100% !important;\n}\n.payment-form[data-v-0a14c218] {\n    max-width: 380px;\n}\n}\n@media only screen and (max-width: 600px) {\nbody[data-v-0a14c218] {\n    position: relative;\n    z-index: -1;\n}\n.payment-form[data-v-0a14c218] {\n    max-width: 400px;\n}\n.table-responsive .table[data-v-0a14c218]{\n    width: 100%;\n}\n.flex-wrap[data-v-0a14c218] {\n    justify-content: center !important;\n}\n.reservation-image[data-v-0a14c218] {\n    position: absolute;\n    top: 0;\n    z-index: -1;\n    width: 101%;\n    border-radius: 0;\n    height: 280px;\n    -o-object-fit: cover;\n       object-fit: cover;\n}\nheader[data-v-0a14c218] {\n    justify-content: center;\n}\n.logo-right>img[data-v-0a14c218] {\n    width: 100px !important;\n    height: 100px !important;\n}\n.header-section[data-v-0a14c218] {\n    flex-direction: column-reverse;\n    gap: 15px;\n    text-align: center;\n}\nsection[data-v-0a14c218] {\n    padding: 0px;\n}\n.form[data-v-0a14c218] {\n    width: 100%;\n    background: white;\n    margin-top: 125px;\n    border-radius: 24px;\n}\n.flex-col[data-v-0a14c218] {\n    width: 100%;\n    text-align: center;\n}\n.grid[data-v-0a14c218] {\n    display: flex;\n    justify-content: center;\n    flex-wrap: wrap;\n    grid-gap: var(--card-padding);\n    width: 100%;\n    padding: 0;\n}\n.cardSelect[data-v-0a14c218] {\n    width: 100%;\n}\nheader[data-v-0a14c218] {\n    padding: 15px;\n}\n.logo-left img[data-v-0a14c218],\n  .logo-right img[data-v-0a14c218] {\n    width: 80%;\n    height: auto;\n}\n}\n@media only screen and (max-width: 450px) {\n.card[data-v-0a14c218] {\n    width: 98%;\n    max-width: 98%;\n    min-width: 98%;\n}\n.table-responsive .table[data-v-0a14c218]{\n    width: 100%;\n}\n.swiper-wrapper[data-v-0a14c218] {\n    cursor: grab;\n    width: 98%;\n}\n.card-image[data-v-0a14c218] {\n    width: 100%;\n}\n.swiper[data-v-0a14c218] {\n    widows: 102%;\n}\n.flex-wrap[data-v-0a14c218] {\n    margin: 1rem;\n    width: 100%;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3096,7 +3028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./navigation.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/navigation.css");
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./navigation.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/navigation.css");
 
             
 
@@ -3105,11 +3037,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_navigation_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -3126,7 +3058,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./pagination.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/pagination.css");
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./pagination.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/pagination.css");
 
             
 
@@ -3135,11 +3067,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_pagination_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -3156,7 +3088,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./scrollbar.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/modules/scrollbar.css");
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./scrollbar.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/modules/scrollbar.css");
 
             
 
@@ -3165,11 +3097,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_scrollbar_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -3186,7 +3118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./swiper-bundle.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper-bundle.css");
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./swiper-bundle.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper-bundle.css");
 
             
 
@@ -3195,11 +3127,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -3216,7 +3148,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./swiper.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/swiper/swiper.css");
+/* harmony import */ var _css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./swiper.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/swiper/swiper.css");
 
             
 
@@ -3225,18 +3157,18 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_swiper_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3246,7 +3178,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css");
 
             
 
@@ -3255,18 +3187,18 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3276,7 +3208,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css");
 
             
 
@@ -3285,11 +3217,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -3308,7 +3240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NewFormReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewFormReservation.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=script&setup=true&lang=js");
 /* harmony import */ var _NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css */ "./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css");
 /* harmony import */ var _NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css */ "./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css");
-/* harmony import */ var C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
@@ -3317,7 +3249,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_amyal_jahez_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_4__["default"])(_NewFormReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_NewFormReservation_vue_vue_type_template_id_0a14c218_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0a14c218"],['__file',"resources/js/Admin/Pages/FormReservation/NewFormReservation.vue"]])
+const __exports__ = /*#__PURE__*/(0,F_Arkan_partners_El_Khadiga_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_4__["default"])(_NewFormReservation_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_NewFormReservation_vue_vue_type_template_id_0a14c218_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-0a14c218"],['__file',"resources/js/Admin/Pages/FormReservation/NewFormReservation.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -3366,7 +3298,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_0_id_0a14c218_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=0&id=0a14c218&lang=css");
 
 
 /***/ }),
@@ -3379,7 +3311,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css");
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_laravel_mix_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_NewFormReservation_vue_vue_type_style_index_1_id_0a14c218_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader/dist/cjs.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/laravel-mix/node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Admin/Pages/FormReservation/NewFormReservation.vue?vue&type=style&index=1&id=0a14c218&scoped=true&lang=css");
 
 
 /***/ }),

@@ -2,10 +2,14 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/Admin/app.js', 'public/js/Admin')
     .vue({ version: 3 })
-    // .extract()
     .postCss('resources/css/admin-app.css', 'public/css', [
         //
     ])
+    .version();
+
+mix.js('resources/js/Website/app.js', 'public/js/Website')
+    .vue({ version: 3 })
+    .postCss('resources/css/website.css', 'public/css')
     .version();
 
 

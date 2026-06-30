@@ -1,328 +1,884 @@
 <template>
-
-    <Head title="الصفحة الرئيسية" />
-    <div class="row">
-        <div class="col-sm-6 col-xl-3">
-            <a  type="button"  class="card bg-body hoverable card-xl-stretch mb-xl-8"  @click="toggle_table_shops">
-
-                <div class="card card-body bg-blue-400 has-bg-image">
-                    <div class="media">
-                        <div class="media-body">
-
-                        </div>
-
-                        <div class="ml-3 align-self-center">
-
-                            <i class="icon-list3 icon-2x " style="color: #115da6"></i>
-                            <b style="color: #115da6;padding: 10px" >
-                                <span class="text-uppercase font-size-xs font-weight-bold">اجمالي الخدمات</span>
-                            </b>
-                            <b style="color: #115da6;padding: 10px" >
-                                <span class="text-uppercase font-size-xs font-weight-bold"> ({{servicesCount}})</span>
-                            </b>
-                        </div>
-                    </div>
+    <Head title="Dashboard" />
+    <Layout :prv_page="[{ name: 'Dashboard' }]">
+        <div class="dashboard-page">
+            <header class="dashboard-hero">
+                <div class="dashboard-hero__content">
+                    <span class="dashboard-hero__eyebrow">Admin Overview</span>
+                    <h1 class="dashboard-hero__title">{{ greeting }}, {{ firstName }}</h1>
+                    <p class="dashboard-hero__desc">
+                        Manage your IQF export catalog, featured homepage products, and site settings from one place.
+                    </p>
                 </div>
-            </a>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-            <a type="button"    class="card bg-body hoverable card-xl-stretch mb-xl-8"  @click="toggle_table_reservations">
-
-                <div class="card card-body bg-blue-400 has-bg-image">
-                    <div class="media">
-                        <div class="media-body">
-
-                        </div>
-
-                        <div class="ml-3 align-self-center">
-
-                            <i class="icon-notebook icon-2x " style="color: #115da6"></i>
-                            <b style="color: #115da6;padding: 10px" >
-                                <span class="text-uppercase font-size-xs font-weight-bold">اجمالي المزايا الإضافية</span>
-                            </b>
-                            <b style="color: #115da6;padding: 10px" >
-                                <span class="text-uppercase font-size-xs font-weight-bold"> ({{additionalsCount}})</span>
-                            </b>
-                        </div>
-                    </div>
+                <div class="dashboard-hero__actions">
+                    <a href="/" target="_blank" rel="noopener noreferrer" class="dashboard-btn dashboard-btn--ghost">
+                        <span v-html="icons.external"></span>
+                        View Website
+                    </a>
+                    <Link href="/admin/products/create" class="dashboard-btn dashboard-btn--primary">
+                        <span v-html="icons.plus"></span>
+                        Add Product
+                    </Link>
                 </div>
-            </a>
-        </div>
+            </header>
 
-    </div>
+            <div class="dashboard-stats">
+                <Link href="/admin/category" class="dashboard-stat dashboard-stat--categories">
+                    <div class="dashboard-stat__icon" v-html="icons.grid"></div>
+                    <div class="dashboard-stat__body">
+                        <span class="dashboard-stat__label">Categories</span>
+                        <strong>{{ categoriesCount }}</strong>
+                        <small>{{ categoriesWithIcons }} with icons</small>
+                    </div>
+                    <span class="dashboard-stat__arrow" v-html="icons.arrow"></span>
+                </Link>
 
-    <div  id="table-reservations"  style="display: none" class="card mb-5 mb-xl-10">
-        <div class="card-header border-0 cursor-pointer">
-            <div class="card-title m-0">
-                <h3 class="fw-bolder m-0">الحجوزات</h3>
+                <Link href="/admin/products" class="dashboard-stat dashboard-stat--products">
+                    <div class="dashboard-stat__icon" v-html="icons.box"></div>
+                    <div class="dashboard-stat__body">
+                        <span class="dashboard-stat__label">Products</span>
+                        <strong>{{ productsCount }}</strong>
+                        <small>{{ standardCount }} standard items</small>
+                    </div>
+                    <span class="dashboard-stat__arrow" v-html="icons.arrow"></span>
+                </Link>
+
+                <Link href="/admin/products" class="dashboard-stat dashboard-stat--featured">
+                    <div class="dashboard-stat__icon" v-html="icons.star"></div>
+                    <div class="dashboard-stat__body">
+                        <span class="dashboard-stat__label">Featured</span>
+                        <strong>{{ featuredCount }}</strong>
+                        <small>shown on homepage</small>
+                    </div>
+                    <span class="dashboard-stat__arrow" v-html="icons.arrow"></span>
+                </Link>
+
+                <Link href="/admin/messages" class="dashboard-stat dashboard-stat--messages">
+                    <div class="dashboard-stat__icon" v-html="icons.mail"></div>
+                    <div class="dashboard-stat__body">
+                        <span class="dashboard-stat__label">Messages</span>
+                        <strong>{{ unreadMessagesCount }}</strong>
+                        <small>unread inquiries</small>
+                    </div>
+                    <span class="dashboard-stat__arrow" v-html="icons.arrow"></span>
+                </Link>
+            </div>
+
+            <section class="dashboard-quick">
+                <h2 class="dashboard-quick__title">Quick Actions</h2>
+                <div class="dashboard-quick__grid">
+                    <Link href="/admin/category/create" class="dashboard-quick__item">
+                        <span class="dashboard-quick__icon" v-html="icons.grid"></span>
+                        <span>New Category</span>
+                    </Link>
+                    <Link href="/admin/products/create" class="dashboard-quick__item">
+                        <span class="dashboard-quick__icon" v-html="icons.box"></span>
+                        <span>New Product</span>
+                    </Link>
+                    <Link href="/admin/messages" class="dashboard-quick__item">
+                        <span class="dashboard-quick__icon" v-html="icons.mail"></span>
+                        <span>View Messages</span>
+                    </Link>
+                    <Link href="/admin/settings" class="dashboard-quick__item">
+                        <span class="dashboard-quick__icon" v-html="icons.settings"></span>
+                        <span>Site Settings</span>
+                    </Link>
+                </div>
+            </section>
+
+            <section v-if="recentMessages.length" class="dashboard-panel dashboard-panel--full">
+                <div class="dashboard-panel__head">
+                    <div>
+                        <h2 class="dashboard-panel__title">Recent Messages</h2>
+                        <p class="dashboard-panel__subtitle">Latest contact form submissions</p>
+                    </div>
+                    <Link href="/admin/messages" class="dashboard-link">View inbox</Link>
+                </div>
+
+                <div class="dashboard-table-wrap">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Sender</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th class="dashboard-table__actions-head"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                v-for="item in recentMessages"
+                                :key="item.id"
+                                :class="{ 'dashboard-row--unread': !item.read_at }"
+                            >
+                                <td>
+                                    <div class="dashboard-cell">
+                                        <strong>{{ item.name }}</strong>
+                                        <small>{{ item.email }}</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="dashboard-message-preview">{{ excerpt(item.message) }}</span>
+                                </td>
+                                <td>
+                                    <span
+                                        class="dashboard-badge"
+                                        :class="item.read_at ? 'dashboard-badge--default' : 'dashboard-badge--featured'"
+                                    >
+                                        {{ item.read_at ? 'Read' : 'Unread' }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <Link
+                                        :href="`/admin/messages/${item.id}`"
+                                        class="dashboard-action"
+                                        title="View message"
+                                    >
+                                        <span v-html="icons.edit"></span>
+                                    </Link>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="dashboard-panels">
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel__head">
+                        <div>
+                            <h2 class="dashboard-panel__title">Recent Products</h2>
+                            <p class="dashboard-panel__subtitle">Latest additions to your catalog</p>
+                        </div>
+                        <Link href="/admin/products" class="dashboard-link">View all</Link>
+                    </div>
+
+                    <div v-if="recentProducts.length" class="dashboard-table-wrap">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Category</th>
+                                    <th>Featured</th>
+                                    <th class="dashboard-table__actions-head"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in recentProducts" :key="item.id">
+                                    <td>
+                                        <div class="dashboard-cell">
+                                            <div class="dashboard-thumb">
+                                                <img
+                                                    v-if="item.image_url"
+                                                    :src="item.image_url"
+                                                    :alt="item.name"
+                                                />
+                                                <span v-else class="dashboard-thumb__placeholder" v-html="icons.box"></span>
+                                            </div>
+                                            <strong>{{ item.name }}</strong>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="dashboard-chip">{{ item.category?.title_en || '—' }}</span>
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="dashboard-badge"
+                                            :class="item.is_featured ? 'dashboard-badge--featured' : 'dashboard-badge--default'"
+                                        >
+                                            {{ item.is_featured ? 'Featured' : 'Standard' }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <Link
+                                            :href="`/admin/products/${item.id}/edit`"
+                                            class="dashboard-action"
+                                            title="Edit product"
+                                        >
+                                            <span v-html="icons.edit"></span>
+                                        </Link>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div v-else class="dashboard-empty">
+                        <div class="dashboard-empty__icon" v-html="icons.box"></div>
+                        <h3>No products yet</h3>
+                        <p>Start building your export catalog.</p>
+                        <Link href="/admin/products/create" class="dashboard-btn dashboard-btn--primary">
+                            Add Product
+                        </Link>
+                    </div>
+                </section>
+
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel__head">
+                        <div>
+                            <h2 class="dashboard-panel__title">Recent Categories</h2>
+                            <p class="dashboard-panel__subtitle">Product groups and navigation</p>
+                        </div>
+                        <Link href="/admin/category" class="dashboard-link">View all</Link>
+                    </div>
+
+                    <div v-if="recentCategories.length" class="dashboard-table-wrap">
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Products</th>
+                                    <th class="dashboard-table__actions-head"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="item in recentCategories" :key="item.id">
+                                    <td>
+                                        <div class="dashboard-cell">
+                                            <div class="dashboard-thumb dashboard-thumb--round">
+                                                <img
+                                                    v-if="item.icon_url"
+                                                    :src="item.icon_url"
+                                                    :alt="item.title_en"
+                                                />
+                                                <span v-else class="dashboard-thumb__placeholder" v-html="icons.grid"></span>
+                                            </div>
+                                            <div>
+                                                <strong>{{ item.title_en }}</strong>
+                                                <small>{{ item.title_ar }}</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="dashboard-count">{{ item.products_count ?? 0 }}</span>
+                                    </td>
+                                    <td>
+                                        <Link
+                                            :href="`/admin/category/${item.id}/edit`"
+                                            class="dashboard-action"
+                                            title="Edit category"
+                                        >
+                                            <span v-html="icons.edit"></span>
+                                        </Link>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div v-else class="dashboard-empty">
+                        <div class="dashboard-empty__icon" v-html="icons.grid"></div>
+                        <h3>No categories yet</h3>
+                        <p>Create your first product group.</p>
+                        <Link href="/admin/category/create" class="dashboard-btn dashboard-btn--primary">
+                            Add Category
+                        </Link>
+                    </div>
+                </section>
             </div>
         </div>
-
-    <div  class="card-body border-top p-9">
-        <div class="table-responsive">
-            <table class="table table-hover table-rounded table-row-bordered border gy-3 gs-3">
-                    <thead>
-                    <tr class="fw-bolder fs-6 text-gray-800 border-bottom-2 border-gray-200 bg-light">
-                        <th class="p-5 text-center border">#</th>
-                        <th class="p-5 text-center border"> العنوان بالعربية </th>
-                        <th class="p-5 text-center border"> العنوان بالانجليزية </th>
-                        <th class="p-5 text-center border">ايقون</th>
-                        <th class="p-5 text-center border">###</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(item,index) in additionals" :key="item.id" :class="{'table-active': index % 2 !== 0 }">
-                        <td class="text-center border">{{ ++index}}</td>
-                        <td class="text-center border">{{item.title_ar}}</td>
-                        <td class="text-center border">{{item.title_en}}</td>
-                        <td class="text-center border"><img :src="item.icon_url ?? '/assets/media/logos/01.png'" style="max-width: 50px;border-radius: 5px;"></td>
-                        <td class="text-center border">
-                            <Link :href="`/admin/additionals/${item.id}/edit`"  >
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#115da6" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) "/>
-                                        <path style="color:#73e14e" d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#115da6" fill-rule="nonzero" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                            <Link   @click="delete_additionals(item.id)" >
-                                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M6,8 L18,8 L17.106535,19.6150447 C17.04642,20.3965405 16.3947578,21 15.6109533,21 L8.38904671,21 C7.60524225,21 6.95358004,20.3965405 6.89346498,19.6150447 L6,8 Z M8,10 L8.45438229,14.0894406 L15.5517885,14.0339036 L16,10 L8,10 Z" fill="#115da6" fill-rule="nonzero"/>
-                                        <path d="M14,4.5 L14,3.5 C14,3.22385763 13.7761424,3 13.5,3 L10.5,3 C10.2238576,3 10,3.22385763 10,3.5 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#115da6" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                        </td>
-                    </tr>
-                    </tbody>
-            </table>
-        </div>
-    </div>
-        <Link href="/admin/additionals"  class="btn btn-lg green"> عرض المزيد
-            <i class="fa fa-plus"></i>
-        </Link>
-    </div>
-
-    <div  id="table-shops" class="card mb-5 mb-xl-10">
-        <div class="card-header border-0 cursor-pointer">
-            <div class="card-title m-0">
-                <h3 class="fw-bolder m-0">الخدمات</h3>
-            </div>
-        </div>
-
-
-        <div  class="card-body border-top p-9">
-        <div class="table-shops">
-            <table class="table table-hover table-rounded table-row-bordered border gy-3 gs-3">
-                    <thead>
-                    <tr class="fw-bolder fs-6 text-gray-800 border-bottom-2 border-gray-200 bg-light">
-                        <th class="p-5 text-center border">#</th>
-                        <th class="p-5 text-center border"> العنوان بالعربية </th>
-                        <th class="p-5 text-center border"> العنوان بالانجليزية </th>
-                        <th class="p-5 text-center border">ايقون</th>
-                        <th class="p-5 text-center border">###</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(item,index) in services" :key="item.id" :class="{'table-active': index % 2 !== 0 }">
-                        <td class="text-center border">{{ ++index}}</td>
-                        <td class="text-center border">{{item.title_ar}}</td>
-                        <td class="text-center border">{{item.title_en}}</td>
-                        <td class="text-center border"><img :src="item.icon_url ?? '/assets/media/logos/01.png'" style="max-width: 50px;border-radius: 5px;"></td>
-                        <td class="text-center border">
-                            <Link :href="`/admin/services/${item.id}/edit`"  >
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#115da6" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) "/>
-                                        <path style="color:#73e14e" d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#115da6" fill-rule="nonzero" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                            <Link   @click="delete_services(item.id)" >
-                                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <rect x="0" y="0" width="24" height="24"/>
-                                        <path d="M6,8 L18,8 L17.106535,19.6150447 C17.04642,20.3965405 16.3947578,21 15.6109533,21 L8.38904671,21 C7.60524225,21 6.95358004,20.3965405 6.89346498,19.6150447 L6,8 Z M8,10 L8.45438229,14.0894406 L15.5517885,14.0339036 L16,10 L8,10 Z" fill="#115da6" fill-rule="nonzero"/>
-                                        <path d="M14,4.5 L14,3.5 C14,3.22385763 13.7761424,3 13.5,3 L10.5,3 C10.2238576,3 10,3.22385763 10,3.5 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#115da6" opacity="0.3"/>
-                                    </g>
-                                </svg>
-                            </Link>
-                        </td>
-                    </tr>
-                    </tbody>
-            </table>
-        </div>
-    </div>
-        <Link href="/admin/services"  class="btn btn-lg green"> عرض المزيد
-            <i class="fa fa-plus"></i>
-        </Link>
-    </div>
-
-
+    </Layout>
 </template>
-<script>
-import Layout from "../../Shared/Layout";
 
-export default {
-    name: "index",
-    layout: [Layout],
-}
-</script>
 <script setup>
+import { computed } from 'vue';
+import { usePage } from '@inertiajs/inertia-vue3';
+import Layout from '../../Shared/Layout';
 
-import { useAttrs} from "vue";
-import {useForm} from "@inertiajs/inertia-vue3";
+const icons = {
+    plus: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+    external: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 5H19V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L19 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M19 14V19C19 19.5523 18.5523 20 18 20H5C4.44772 20 4 19.5523 4 19V6C4 5.44772 4.44772 5 5 5H10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+    arrow: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    edit: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 20H8L18.5 9.5C19.3284 8.67157 19.3284 7.32843 18.5 6.5V6.5C17.6716 5.67157 16.3284 5.67157 15.5 6.5L5 17V20H4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>`,
+    box: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7.5L12 3.5L20 7.5L12 11.5L4 7.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 16.5L12 20.5L20 16.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>`,
+    grid: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="3" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="13" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/></svg>`,
+    star: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3.5L14.8 9.2L21 10.1L16.5 14.4L17.6 20.6L12 17.6L6.4 20.6L7.5 14.4L3 10.1L9.2 9.2L12 3.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>`,
+    settings: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 2V4M12 20V22M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M2 12H4M20 12H22M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
+    mail: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>`,
+};
 
-
-
-
-const attrs = useAttrs();
-let form = useForm({});
-
-
-let props = defineProps({
-    services:Object,
-    servicesCount:Object,
-    additionals:Object,
-    additionalsCount:Object,
-
+const props = defineProps({
+    categoriesCount: Number,
+    productsCount: Number,
+    featuredCount: Number,
+    categoriesWithIcons: Number,
+    unreadMessagesCount: Number,
+    recentProducts: Array,
+    recentCategories: Array,
+    recentMessages: Array,
 });
 
-let toggle_table_reservations = function () {
-    $('#table-reservations').toggle(1000);
-    $('#table-shops').hide()
-}
-let delete_services = (id) => {
-    $('#table-shops').hide()
+const page = usePage();
 
-    Swal.fire({
-        title: 'هل أنت متأكد من الحذف؟',
-        text:  "لا يمكن التراجع عن هذه العملية!",
-        icon: 'warning',
-        iconColor: '#115da6',
-        showCancelButton: true,
-        confirmButtonColor: '#115da6',
-        cancelButtonColor: '#72808b',
-        cancelButtonText: 'الغاء',
-        confirmButtonText: 'موافق',
-        backdrop: 'static',
-        allowOutsideClick: false,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            form.delete('/admin/services/'+ id , { preserveState: true,
-                replace: true,
-                preserveScroll: true,})
+const firstName = computed(() => {
+    const name = page.props.value?.user?.name || 'Admin';
+    return name.split(' ')[0];
+});
 
-        }
+const greeting = computed(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good morning';
+    if (hour < 17) return 'Good afternoon';
+    return 'Good evening';
+});
 
-    });
-}
+const standardCount = computed(() =>
+    Math.max(0, (props.productsCount || 0) - (props.featuredCount || 0))
+);
 
-let toggle_table_shops = function () {
-    $('#table-shops').toggle(1000);
-    $('#table-reservations').hide()
-
-}
-let delete_additionals = (id) => {
-    Swal.fire({
-        title: 'هل أنت متأكد من الحذف؟',
-        text:  "لا يمكن التراجع عن هذه العملية!",
-        icon: 'warning',
-        iconColor: '#115da6',
-        showCancelButton: true,
-        confirmButtonColor: '#115da6',
-        cancelButtonColor: '#72808b',
-        cancelButtonText: 'الغاء',
-        confirmButtonText: 'موافق',
-        backdrop: 'static',
-        allowOutsideClick: false,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            form.delete('/admin/additionals/'+ id , { preserveState: true,
-                replace: true,
-                preserveScroll: true,})
-
-        }
-    });
-}
+const excerpt = (text, limit = 72) => {
+    if (!text) return '';
+    const normalized = text.replace(/\s+/g, ' ').trim();
+    return normalized.length > limit ? `${normalized.slice(0, limit)}...` : normalized;
+};
 </script>
 
 <style scoped>
+.dashboard-page {
+    --d-primary: #A91E2C;
+    --d-primary-dark: #8E1824;
+    --d-secondary: #5A8F3C;
+    --d-surface: #ffffff;
+    --d-border: #e6ebe6;
+    --d-text: #1a1a1a;
+    --d-muted: #6b7280;
+    --d-radius: 16px;
+    --d-shadow: 0 8px 32px rgba(26, 26, 26, 0.06);
+    padding-bottom: 2rem;
+}
 
-.badge-primary {
-    color: #fff;
-    background-color: #7931ad;
+.dashboard-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding: 1.85rem 2rem;
+    border-radius: var(--d-radius);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(90, 143, 60, 0.14), transparent 45%),
+        radial-gradient(circle at 0% 100%, rgba(169, 30, 44, 0.12), transparent 42%),
+        var(--d-surface);
+    border: 1px solid var(--d-border);
+    box-shadow: var(--d-shadow);
 }
-.badge-danger {
-    color: #fff;
-    background-color: #d645cf;
+
+.dashboard-hero__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    color: var(--d-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
-.badge-success {
-    color: #fff;
-    background-color: rgba(178, 69, 255, 0.51);
+
+.dashboard-hero__title {
+    margin: 0;
+    color: var(--d-text);
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
-.badge-warning{
-    color: #fff;
-    background-color: rgb(146, 0, 156);
+
+.dashboard-hero__desc {
+    margin: 0.55rem 0 0;
+    max-width: 38rem;
+    color: var(--d-muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
 }
-.to-top {
-    color: #400057;
+
+.dashboard-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    flex-shrink: 0;
 }
-.to-bottom {
-    color: rgba(193, 21, 168, 0.6);
+
+.dashboard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.72rem 1.15rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
     text-decoration: none;
-    background-color: transparent;
-}
-.gm-style-iw-d {
-    overflow: auto !important;
-}
-
-.gm-style-iw {
-    background: #f3ffe5 !important;
-}
-.bg-blue-400 {
-    background-color: #ffffff;
-}
-.bg-success-400 {
-    background-color: #d645cf;
-}
-.bg-danger-400 {
-    background-color: rgba(178, 69, 255, 0.51);
-}
-.card{
-    border-radius: 15px;
-}
-.btn{
-    border-radius: 15px;
-}
-.btn-primary{
-    background-color: #88D645;
-}
-.btn-primary:hover{
-    background-color: #70b931;
-}
-.btn-info{
-    background-color: #31AD4C;
-}
-.btn-info:hover {
-    background-color: #6db530;
-}
-.btn-success {
-    background-color: #40bf80;
-}
-.btn-success:hover {
-    background-color: #1e8a35;
-}
-.form-control{
-    border-radius: 15px;
-}
-.font-weight-semibold {
-    font-size: 17px;
-    color: #115da6;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
 }
 
+.dashboard-btn--primary {
+    background: linear-gradient(135deg, var(--d-primary), var(--d-primary-dark));
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(169, 30, 44, 0.22);
+}
+
+.dashboard-btn--primary:hover {
+    transform: translateY(-1px);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(169, 30, 44, 0.28);
+}
+
+.dashboard-btn--ghost {
+    background: #fff;
+    border: 1px solid var(--d-border);
+    color: var(--d-text);
+}
+
+.dashboard-btn--ghost:hover {
+    background: #f7f9f7;
+    color: var(--d-text);
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1.1rem 1.15rem;
+    border-radius: 14px;
+    background: var(--d-surface);
+    border: 1px solid var(--d-border);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--d-shadow);
+    border-color: rgba(90, 143, 60, 0.25);
+}
+
+.dashboard-stat__icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.dashboard-stat--categories .dashboard-stat__icon {
+    background: rgba(90, 143, 60, 0.12);
+    color: var(--d-secondary);
+}
+
+.dashboard-stat--products .dashboard-stat__icon {
+    background: rgba(169, 30, 44, 0.1);
+    color: var(--d-primary);
+}
+
+.dashboard-stat--featured .dashboard-stat__icon {
+    background: rgba(234, 179, 8, 0.14);
+    color: #b45309;
+}
+
+.dashboard-stat--settings .dashboard-stat__icon {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.dashboard-stat--messages .dashboard-stat__icon {
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+}
+
+.dashboard-panel--full {
+    margin-bottom: 1rem;
+}
+
+.dashboard-row--unread {
+    background: rgba(169, 30, 44, 0.03);
+}
+
+.dashboard-message-preview {
+    color: var(--d-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.dashboard-cell small {
+    display: block;
+    margin-top: 0.1rem;
+    color: var(--d-muted);
+    font-size: 0.76rem;
+    font-weight: 500;
+}
+
+.dashboard-stat__body {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-stat__label {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--d-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.dashboard-stat__body strong {
+    display: block;
+    color: var(--d-text);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.dashboard-stat__body small {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--d-muted);
+    font-size: 0.76rem;
+}
+
+.dashboard-stat__arrow {
+    color: #c4cbc4;
+    flex-shrink: 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-stat:hover .dashboard-stat__arrow {
+    color: var(--d-secondary);
+    transform: translateX(2px);
+}
+
+.dashboard-quick {
+    margin-bottom: 1rem;
+    padding: 1.15rem 1.25rem;
+    border-radius: var(--d-radius);
+    background: var(--d-surface);
+    border: 1px solid var(--d-border);
+}
+
+.dashboard-quick__title {
+    margin: 0 0 0.85rem;
+    color: var(--d-text);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.dashboard-quick__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+}
+
+.dashboard-quick__item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    background: #f7f9f7;
+    border: 1px solid transparent;
+    color: var(--d-text);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-quick__item:hover {
+    background: #fff;
+    border-color: rgba(90, 143, 60, 0.3);
+    color: var(--d-secondary);
+}
+
+.dashboard-quick__icon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--d-muted);
+    flex-shrink: 0;
+}
+
+.dashboard-quick__item:hover .dashboard-quick__icon {
+    color: var(--d-secondary);
+}
+
+.dashboard-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.dashboard-panel {
+    padding: 1.25rem;
+    border-radius: var(--d-radius);
+    background: var(--d-surface);
+    border: 1px solid var(--d-border);
+    box-shadow: var(--d-shadow);
+}
+
+.dashboard-panel__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.dashboard-panel__title {
+    margin: 0;
+    color: var(--d-text);
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.dashboard-panel__subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--d-muted);
+    font-size: 0.82rem;
+}
+
+.dashboard-link {
+    color: var(--d-secondary);
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dashboard-link:hover {
+    color: var(--d-primary);
+}
+
+.dashboard-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--d-border);
+    border-radius: 14px;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 320px;
+}
+
+.dashboard-table thead {
+    background: #f7f9f7;
+}
+
+.dashboard-table th {
+    padding: 0.75rem 0.9rem;
+    color: var(--d-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid var(--d-border);
+}
+
+.dashboard-table td {
+    padding: 0.85rem 0.9rem;
+    border-bottom: 1px solid #eef2ee;
+    vertical-align: middle;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #fcfdfc;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-table__actions-head {
+    width: 48px;
+    text-align: right;
+}
+
+.dashboard-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.dashboard-cell strong {
+    display: block;
+    color: var(--d-text);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.dashboard-cell small {
+    display: block;
+    margin-top: 0.1rem;
+    color: var(--d-muted);
+    font-size: 0.76rem;
+}
+
+.dashboard-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    overflow: hidden;
+    background: #f3f5f3;
+    border: 1px solid var(--d-border);
+    flex-shrink: 0;
+}
+
+.dashboard-thumb--round {
+    border-radius: 50%;
+}
+
+.dashboard-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dashboard-thumb__placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: #9ca3af;
+}
+
+.dashboard-chip {
+    display: inline-flex;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(90, 143, 60, 0.1);
+    color: var(--d-secondary);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.dashboard-badge {
+    display: inline-flex;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.dashboard-badge--featured {
+    background: rgba(169, 30, 44, 0.1);
+    color: var(--d-primary);
+}
+
+.dashboard-badge--default {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.dashboard-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 0.5rem;
+    border-radius: 8px;
+    background: #f3f5f3;
+    color: var(--d-text);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.dashboard-action {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    margin-left: auto;
+    border: 1px solid var(--d-border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--d-muted);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.dashboard-action:hover {
+    border-color: rgba(90, 143, 60, 0.35);
+    background: rgba(90, 143, 60, 0.08);
+    color: var(--d-secondary);
+}
+
+.dashboard-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+.dashboard-empty__icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #f3f5f3;
+    color: #9ca3af;
+}
+
+.dashboard-empty h3 {
+    margin: 0.2rem 0 0;
+    color: var(--d-text);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.dashboard-empty p {
+    margin: 0 0 0.5rem;
+    color: var(--d-muted);
+    font-size: 0.86rem;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-stats,
+    .dashboard-quick__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-hero {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard-panels {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-stats,
+    .dashboard-quick__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-hero__title {
+        font-size: 1.5rem;
+    }
+}
 </style>

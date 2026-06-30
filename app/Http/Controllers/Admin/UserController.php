@@ -28,7 +28,7 @@ class UserController extends Controller
 
         $item = auth()->user();
         $item->update($request->validate($validate_arr));
-        session()->flash('user_message', ['type' => 'success', 'msg' => 'تم التعديل بنجاح']);
+        session()->flash('user_message', ['type' => 'success', 'msg' => 'Profile updated successfully']);
         return redirect('/admin/profile');
     }
 
@@ -47,7 +47,7 @@ class UserController extends Controller
        $request->validate($validate_arr);
         #Match The Old Password
         if(!Hash::check($request->old_password, auth()->user()->password)){
-            session()->flash('user_message', ['type' => 'error', 'msg' => 'مشكلة في كلمة المرور']);
+            session()->flash('user_message', ['type' => 'error', 'msg' => 'Current password is incorrect']);
             return redirect()->back();
         }
 
@@ -55,7 +55,7 @@ class UserController extends Controller
         User::whereId(auth()->user()->id)->update([
             'password' => Hash::make($request->new_password)
         ]);
-        session()->flash('user_message', ['type' => 'success', 'msg' => 'تم تعديل كلمة المرور بنجاح']);
+        session()->flash('user_message', ['type' => 'success', 'msg' => 'Password updated successfully']);
         return redirect()->back();
     }
 

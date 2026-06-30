@@ -7,13 +7,19 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Category;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 class CategoryController extends Controller
 {
     public function index(Request $request){
         $categories = Category::query();
         
-        if ($request->filled('name'))
-            $categories->where('title', 'like', '%' . $request->input('name') . '%');
+        if ($request->filled('name')) {
+            $search = $request->input('name');
+            $categories->where(function ($query) use ($search) {
+                $query->where('title_en', 'like', '%' . $search . '%')
+                    ->orWhere('title_ar', 'like', '%' . $search . '%');
+            });
+        }
 
         $categories = $categories->select(['*'])
             ->orderByDesc('id')
@@ -32,7 +38,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::query()->create($this->validateItem($request, 'create', -1));
-        session()->flash('user_message', ['type' => 'success', 'msg' => 'تم الاضافة بنجاح']);
+        session()->flash('user_message', ['type' => 'success', 'msg' => 'Category added successfully']);
         return redirect('/admin/category');
     }
 
@@ -55,7 +61,7 @@ class CategoryController extends Controller
             $arr['icon'] = $Category->icon;
         }
         $Category->update($arr);
-        session()->flash('user_message', ['type' => 'success', 'msg' => 'تم التعديل بنجاح']);
+        session()->flash('user_message', ['type' => 'success', 'msg' => 'Category updated successfully']);
         return redirect('/admin/category');
     }
 
@@ -67,6 +73,7 @@ class CategoryController extends Controller
             'icon'            => '',
         ];
         $res = $request->validate($validate_arr);
+        $res['slug'] = Str::slug($res['title_en']);
 
         if ($request->hasFile('icon')) {
             $res['icon'] = $this->saveFile($request->icon,'assets/category');

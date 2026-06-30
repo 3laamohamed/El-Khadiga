@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html direction="rtl" dir="rtl" style="direction: rtl">
+<html lang="en" dir="ltr">
 <!--begin::Head-->
 <head>
     <base href="../../../">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
 
-    <link href="{{asset('/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('/assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+
+    <link href="{{asset('/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 
     <link href="{{asset('assets/css/icons/icomoon/styles.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/custom-style.css')}}" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css"  rel="stylesheet" type="text/css"/>
     <link href="{{ mix('/css/admin-app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/Admin/app.js') }}" defer></script>
-    <title id="titleShop"></title>
-    <link rel="shortcut icon" id="iconAnd" href="/assets/media/logos/01.png" />
-    <link rel="apple-touch-icon" id="iconIos" href="/assets/media/logos/01.png">
+    <title id="titleShop">El Khadiga Admin</title>
+    <link rel="shortcut icon" id="iconAnd" href="/images/logo.png" />
+    <link rel="apple-touch-icon" id="iconIos" href="/images/logo.png">
 
     <style>
         .vue-date-picker-custom{
-            padding-right: 31px !important;
+            padding-left: 31px !important;
             font-family: 'Inter' !important;
         }
         .dp__arrow_bottom{
@@ -36,10 +34,12 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body"  class="header-tablet-and-mobile-fixed aside-enabled">
-<!--begin::Theme mode setup on page load-->
-<script>let defaultThemeMode = "light"; let themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
-<!--end::Theme mode setup on page load-->
+<body id="kt_body" class="header-tablet-and-mobile-fixed aside-enabled">
+<script>
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.setAttribute('data-theme-mode', 'light');
+    localStorage.setItem('data-theme', 'light');
+</script>
 <!--begin::Main-->
 <!--begin::Root-->
 <div class="d-flex flex-column flex-root">
@@ -69,31 +69,10 @@
 <!--begin::Global Javascript Bundle(mandatory for all pages)-->
 <script src="{{asset('/assets/js/scripts.bundle.js')}}"></script>
 <script src="{{asset('/assets/plugins/global/plugins.bundle.js')}}"></script>
-{{--<script src="{{asset('/assets/js/bootstrap-datepicker.js')}}"></script>--}}
-{{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"></script>--}}
-
-
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>--}}
 
 <!--end::Global Javascript Bundle-->
 
-<!--begin::Page Vendors Javascript(used by this page)-->
-{{--<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>--}}
-
-{{--<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>--}}
-<!--end::Page Vendors Javascript-->
-
 <!--begin::Page Custom Javascript(used by this page)-->
-<script>
-    // setTimeout(function () {
-    //     var picker = new Pikaday({
-    //         field: document.getElementById('datepicker'),
-    //         format: 'YYYY-MM-DD',
-    //     });
-    // },1000)
-</script>
-
 <script>
     let wi = window.location.pathname
     if(wi.includes('website/form')){
@@ -105,7 +84,7 @@
             .then((response) => {
                 $("#iconAnd").attr('href',response.data.logo_url)
                 $("#iconIos").attr('href',response.data.logo_url)
-                $('#titleShop').html(response.data.name +' |'+ ' حجز موعد ')
+                $('#titleShop').html(response.data.name +' | Book appointment')
             })
             .then((error) => console.log(error));
         }
