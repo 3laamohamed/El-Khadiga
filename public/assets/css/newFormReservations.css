@@ -1,0 +1,163 @@
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: url(/assets/success/bg.png) top right no-repeat;
+  background-size: contain;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Somar";
+  src: url("/assets/success/alfont_com_SomarGX.ttf");
+}
+:root {
+  --primary-color: #115da6;
+  --description-color: #01336380;
+  --text-color: #515151;
+  --info-color: #7d7d7d;
+  --primary-dark-color: #013363;
+  --input-color: #99a3ba;
+  --input-border: #cdd9ed;
+  --input-background: #fff;
+  --input-placeholder: #cbd1dc;
+  --input-border-focus: #115da6;
+  --group-color: var(--input-color);
+  --group-border: var(--input-border);
+  --group-background: #eef4ff;
+  --group-color-focus: #fff;
+  --group-border-focus: var(--input-border-focus);
+  --group-background-focus: #678efe;
+  --card-line-height: 1.2em;
+  --card-padding: 1em;
+  --card-radius: 0.5em;
+  --color-green: #3f9a30;
+  --color-gray: #e2ebf6;
+  --color-dark-gray: #c4d1e1;
+  --radio-border-width: 2px;
+  --radio-size: 1.5em;
+}

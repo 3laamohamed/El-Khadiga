@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[266],{266:(e,n,r)=>{r.r(n),r.d(n,{default:()=>o});var t=r(821);const c={},o=(0,r(3744).Z)(c,[["render",function(e,n){var r=(0,t.resolveComponent)("Head");return(0,t.openBlock)(),(0,t.createBlock)(r,{title:"الرئيسية"})}]])}}]);

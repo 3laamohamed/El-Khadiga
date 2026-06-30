@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[523],{7523:(e,n,t)=>{t.r(n),t.d(n,{default:()=>a});var r=t(821);const c={name:"CreateReservation"};const a=(0,t(3744).Z)(c,[["render",function(e,n,t,c,a,l){return(0,r.openBlock)(),(0,r.createElementBlock)("h1",null,"qqwfqwf")}]])}}]);

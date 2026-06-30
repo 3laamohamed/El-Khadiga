@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html direction="rtl" dir="rtl" style="direction: rtl">
+<!--begin::Head-->
+<head>
+    <base href="../../../">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="{{asset('/assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="{{asset('assets/css/icons/icomoon/styles.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/custom-style.css')}}" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css"  rel="stylesheet" type="text/css"/>
+    <link href="{{ mix('/css/admin-app.css') }}" rel="stylesheet" />
+    <script src="{{ mix('/js/Admin/app.js') }}" defer></script>
+    <title id="titleShop"></title>
+    <link rel="shortcut icon" id="iconAnd" href="/assets/media/logos/01.png" />
+    <link rel="apple-touch-icon" id="iconIos" href="/assets/media/logos/01.png">
+
+    <style>
+        .vue-date-picker-custom{
+            padding-right: 31px !important;
+            font-family: 'Inter' !important;
+        }
+        .dp__arrow_bottom{
+            display: none;
+        }
+    </style>
+    @inertiaHead
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body"  class="header-tablet-and-mobile-fixed aside-enabled">
+<!--begin::Theme mode setup on page load-->
+<script>let defaultThemeMode = "light"; let themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
+<!--end::Theme mode setup on page load-->
+<!--begin::Main-->
+<!--begin::Root-->
+<div class="d-flex flex-column flex-root">
+    <!--begin::Page-->
+    @inertia
+    <!--end::Page-->
+</div>
+
+
+
+<!--end::Root-->
+<!--end::Main-->
+<!--begin::Scrolltop-->
+<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+    <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+    <span class="svg-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+				</svg>
+			</span>
+    <!--end::Svg Icon-->
+</div>
+<!--end::Scrolltop-->
+<!--begin::Javascript-->
+<script>let hostUrl = "/assets/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<script src="{{asset('/assets/js/scripts.bundle.js')}}"></script>
+<script src="{{asset('/assets/plugins/global/plugins.bundle.js')}}"></script>
+{{--<script src="{{asset('/assets/js/bootstrap-datepicker.js')}}"></script>--}}
+{{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"></script>--}}
+
+
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>--}}
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>--}}
+
+<!--end::Global Javascript Bundle-->
+
+<!--begin::Page Vendors Javascript(used by this page)-->
+{{--<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>--}}
+
+{{--<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>--}}
+<!--end::Page Vendors Javascript-->
+
+<!--begin::Page Custom Javascript(used by this page)-->
+<script>
+    // setTimeout(function () {
+    //     var picker = new Pikaday({
+    //         field: document.getElementById('datepicker'),
+    //         format: 'YYYY-MM-DD',
+    //     });
+    // },1000)
+</script>
+
+<script>
+    let wi = window.location.pathname
+    if(wi.includes('website/form')){
+        let match = wi.match(/\/form\/(\d+)/)
+        if(match && match[1]){
+            axios.post("/website/checkStore", {
+                id: match[1],
+            })
+            .then((response) => {
+                $("#iconAnd").attr('href',response.data.logo_url)
+                $("#iconIos").attr('href',response.data.logo_url)
+                $('#titleShop').html(response.data.name +' |'+ ' حجز موعد ')
+            })
+            .then((error) => console.log(error));
+        }
+    }
+</script>
+
+<!--end::Javascript-->
+</body>
+<!--end::Body-->
+</html>
